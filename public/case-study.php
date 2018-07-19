@@ -2,7 +2,6 @@
 include '../private/initalize.php';
 $title = "Portfolio ";
 include(SHARED_PATH .'/header.php');
-//include 'includes/main-slider-show.php';
 
 
 $page = isset($_GET['page']) ? $_GET['page'] : '';
@@ -10,7 +9,9 @@ $error = isset($_GET['error']);
 $view ='';
 if ( 0 < $page && $page != '' )
 {
-    $result = $mysqli->query("SELECT * FROM projects WHERE id=$page")  or 	pageError();
+    global $connection;
+
+    $result = mysqli_query($connection,"SELECT * FROM projects WHERE id=".'$page');
     while($row = mysqli_fetch_array($result))
     {
         $brief = $row['brief'];
@@ -31,9 +32,7 @@ if ( 0 < $page && $page != '' )
         $website = $row['website'];
         $title = $name . " | Case Study ";
     }
-    include '../private/shared/header.php';
 
-    include 'includes/main-slider-show.php';
     ?>
     <div id="content-area">
 
@@ -167,8 +166,6 @@ else
     $name = "Error";
     $title = "Case Study | DeMario Windom";
     $page = '0';
-    include '../private/shared/header.php';
-    include 'includes/main-slider-show.php';
     ?>
     <div id="content-area">
         <h1 class ="portfolio-question-header"> Oops!</h1>
