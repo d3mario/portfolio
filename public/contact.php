@@ -1,8 +1,8 @@
-<?php include 'core/init.php';?>
-<?php $title = "Contact "; ?>
-<?php include 'includes/overall/header.php'; ?>
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/main-slider-show.php'; ?>
+<?php
+include '../private/initalize.php' ;
+$title = "Portfolio ";
+include(SHARED_PATH .'/header.php');
+?>
 
     <main id="content-area">
     
@@ -92,4 +92,6 @@
   </div>
 
 </div>
-<?php include 'includes/footer.php'; ?>
+<?php
+include(SHARED_PATH .'/footer.php');
+?>

@@ -102,7 +102,7 @@ $(document).ready(function() {
     	<div id="navigation"><!-- #BeginLibraryItem "/Library/main-nav.lbi" -->
 <div id="sprite-wrapper">
   <ul id="sprite">
-    <li class="home"><a href="index.html"><span>Home</span> </a></li>
+    <li class="home"><a href=><span>Home</span> </a></li>
     <li class="link02"><a href="news.html"><span>Link 02</span> </a></li>
     <li class="audio"><a href="brilliance-bio.html"><span>News</span> </a></li>
     <li class="bio"><a href="index.html"><span>Bio</span> </a></li>

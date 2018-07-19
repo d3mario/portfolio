@@ -1,8 +1,8 @@
-<?php include '../private/initalize.php' ?>
-<?php $title = "Portfolio "; ?>
-<?php include '../private/shared/header.php'; ?>
-<?php include 'includes/main-slider-show.php'; ?>
-
+<?php
+include '../private/initalize.php' ;
+$title = "Portfolio ";
+include(SHARED_PATH .'/header.php');
+?>
     <main id="content-area">
         <h1 class ="portfolio-question-header"> Do you agree</h1>
         <h2 class ="question">Quality Material Should Represent Your Brand?</h2>
@@ -73,5 +73,6 @@
         </div>
 
     </main>
-<?php include '../private/shared/footer.php'; ?>
-
+<?php
+include(SHARED_PATH .'/footer.php');
+?>

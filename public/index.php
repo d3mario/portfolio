@@ -1,7 +1,8 @@
 <?php
     include '../private/initalize.php' ;
     $title = "Portfolio ";
-    include '../private/shared/header.php';
+    include(SHARED_PATH .'/header.php');
+
 //    include 'includes/main-slider-show.php';
  ?>
 <main id="content-area">

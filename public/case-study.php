@@ -1,8 +1,9 @@
 <?php
 include '../private/initalize.php';
 $title = "Portfolio ";
-include '../private/shared/header.php';
-include 'includes/main-slider-show.php';
+include(SHARED_PATH .'/header.php');
+//include 'includes/main-slider-show.php';
+
 
 $page = isset($_GET['page']) ? $_GET['page'] : '';
 $error = isset($_GET['error']);
@@ -175,4 +176,5 @@ else
     </div>
     <?php
 }
-include '../private/shared/footer.php'; ?>
+include(SHARED_PATH .'/footer.php');
+?>
