@@ -1,0 +1,71 @@
+
+
+  body {
+	/*display: block;*/
+
+	font-size: 76%;
+	background-color: #7d7d7d;
+	width: 1080px;
+	min-height: 680px;
+	/*height: 2000px;*/
+	margin: 0 auto;
+}
+
+	#container	{
+		float: left;
+		width: 1080px;
+		min-height: 680px;
+		background-image: url(../../images/brilliance-way-high-splash.jpg);
+		background-repeat: no-repeat;  
+		margin: 0 auto;
+		}
+		
+		#copywrite	{
+		float: left;
+		font-family:Verdana, Geneva, sans-serif;
+			color: #CCC;
+			background-color: #333;
+			font-size: .75em;
+			text-align: center;
+		width: 1024px;
+		height: auto;
+		margin: 0 auto;
+		/*background-color: #033;*/	
+	}
+
+/*-------VIDEO-------*/
+#splash-video	{
+	float: left;
+	width: 290px;
+	height: 163px;
+	margin: 55px 40px 0px 658px;
+	
+}
+	
+/*------IMAGES-------*/
+
+#banners {
+	float: left;
+	height: auto;
+	width: 300px;
+	/*background-color: #fff;*/	
+	margin: 100px 0px 0px 700px;
+}
+
+		
+	.splash-banners	{
+		margin: 10px 10px 0px 0px;	
+	}
+
+a:link	{
+	color: #CCC;
+	text-decoration: none;
+}
+a:visited	{
+	color: #fff;	
+	text-decoration: none;
+}
+a:hover	{
+	color: #fff;	
+	text-decoration: none;
+}

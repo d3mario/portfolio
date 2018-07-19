@@ -1,0 +1,56 @@
+/* LINKS
+	---------------------------------------------------- */
+
+@media screen and (min-width:300px ) and (max-width: 699px) {
+    a {
+        color: #334c5a;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #58839a;
+    }
+    #media-display a{
+        color: #fff;
+        text-decoration: none;
+    }
+    #media-display a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover .samples-text, #button {
+        /*background-color: #334c5b;*/
+        -o-transition:color .2s ease-out, background 1s ease-in;
+        -ms-transition:color .2s ease-out, background 1s ease-in;
+        -moz-transition:color .2s ease-out, background 1s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+    }
+    a .samples-text, #button{
+        -o-transition:color .2s ease-out, background 1s ease-in;
+        -ms-transition:color .2s ease-out, background 1s ease-in;
+        -moz-transition:color .2s ease-out, background 1s ease-in;
+        -webkit-transition:color .5s ease-out, background .5s ease-in;
+    }
+}
+
+@media screen and (min-width:700px ) {
+
+    a {
+        color: #334c5a;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #58839a;
+    }
+    a:hover .samples-text {
+        background-color: #334c5b;
+        -o-transition:color .2s ease-out, background 1s ease-in;
+        -ms-transition:color .2s ease-out, background 1s ease-in;
+        -moz-transition:color .2s ease-out, background 1s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+    }
+    a .samples-text {
+        -o-transition:color .2s ease-out, background 1s ease-in;
+        -ms-transition:color .2s ease-out, background 1s ease-in;
+        -moz-transition:color .2s ease-out, background 1s ease-in;
+        -webkit-transition:color .5s ease-out, background .5s ease-in;
+    }}

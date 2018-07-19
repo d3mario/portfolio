@@ -1,0 +1,1020 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+
+
+body	{
+	font-size: 76%;
+	width: 1167px;
+	height: auto;	
+	margin: 0 auto;
+		background-image: url(../images/city-bg.jpg); 
+	background-repeat:no-repeat !important;
+	background-position: 50% 0;
+	background-color: #fff;
+}
+#outer-wraper	{
+	width: 1167px;
+	height: auto;
+	/*background-image: url(../images/city-bg2.jpg);
+	background-repeat:no-repeat !important;*/
+	/*background-color: fffdfe;*/
+	/*margin: 0 auto;*/
+	/*margin: 0px 0px 10px 0px;	*/
+}
+
+
+
+#header	{
+	width: 933px;
+	height: 315px;
+	/*background-image: url(../images/head1.jpg);
+	background-repeat: no-repeat;*/
+	background-color: #590002;
+	margin: 0 auto;
+	overflow: hidden;	
+	
+}
+
+#navigation	{
+	float: left;
+	width: 933px;
+	height: 72px;
+	/*background-image: url(../images/brill-nav.png);*/
+	position: relative;
+	z-index: 100;
+	margin: 10px 0px 0px 0px;
+}
+
+	/* SPRITE - (MAIN-NAV)
+
+------------------------------------- */
+
+#sprite-wrapper {
+	/*background-color: #000;*/
+	float: left;
+	width: 933px;
+	height: 72px;
+	/*padding: 5px 0px 5px 10px;*/
+	margin: 0px;
+	overflow: hidden;
+}
+/* rid the bullets and spacing - seen later */
+
+ 
+
+#sprite {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+/* hide the sprite at the start */
+
+ 
+
+#sprite li {
+	height: 67px;
+	float: left;
+	overflow: hidden;
+	text-indent: -9999px;
+	/*margin: 4px;*/
+}
+/* define the big sprite image - we just hid this above */
+
+
+
+#sprite li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/brill-nav.png);
+	background-repeat: no-repeat;
+}
+/* btn - home *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.home {
+	width: 125px;
+	height: 72px;
+	padding: 0px;
+	magin: 0px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.home a {
+	background-position: 0px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.home a:hover {
+	background-position: 0px 0px;
+}
+/*btn -link02 ******************************************/
+
+
+#sprite li.link02 {
+	width: 109px;
+	height: 72px;
+	padding: 0px;
+	magin: 0px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.link02 a {
+	background-position: -125px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.link02 a:hover {
+	background-position: -125px 0px;
+}
+
+
+
+
+
+/* btn - audio *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.audio {
+	width: 88px;
+	height: 72px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.audio a {
+	background-position: -233px -64px;
+	text-display: none;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.audio a:hover {
+	background-position: -233px 0px;
+}
+/* btn - bio *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.bio {
+	width: 276px;
+	height: 62px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.bio a {
+	background-position: -320px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.bio a:hover {
+	background-position: -320px 0px;
+}
+/* btn - photos *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.photos {
+	width: 99px;
+	height: 62px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.photos a {
+	background-position: -596px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.photos a:hover {
+	background-position: -596px 0px;
+}
+/* btn - events *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.events {
+	width: 112px;
+	height: 75px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.events a {
+	background-position: -694px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.events a:hover {
+	background-position: -694px 0px;
+}
+/* btn - bookings *******************************************/
+
+/* what is the w/h of one sprite button? */
+
+
+
+#sprite li.bookings {
+	width: 124px;
+	height: 67px;
+}
+/* what is the button up-state (starting) position? (Width/Height)*/ 
+
+#sprite li.bookings a {
+	background-position: -807px -64px;
+}
+/* what is the button over-state (hover) position? (Width/Height)*/ 
+
+#sprite li.bookings a:hover {
+	background-position: -807px 0px;
+}
+#sprite span {
+	display: none;
+}
+
+
+
+#wrapper	{
+	width: 933px;
+	min-height: 1050px;
+	overflow: auto;
+	background-image: url(../images/wrapper-bg.jpg);
+	background-repeat:repeat;
+	/*background-color: #fff;*/
+	margin: 0 auto;
+	padding: 0px;	
+	/*border: 5px solid #3e3f40;*/
+}
+
+#main-content	{
+	float: left;
+	/*width: 740px;*/
+	width: 650px;
+	/*min-height: 900px;*/
+	height: auto;	
+	background-color: #fff;	
+	margin: 5px 5px 1px 10px;
+	border-right: 5px solid #3E3F40
+}
+
+#ad-space	{
+	float: left;
+	/*width: 150px;*/
+	width: 246px;
+	max-height: 2500px;	
+	background-color: #fff;
+	margin: 5px 5px 0px 2px;
+	border-right: solid 5px #efefef;
+	/*border-left: solid 0px #3e3f40;*/
+	border-top: solid 5px #efefef;
+	padding: 2px 0px 20px 2px;
+}
+/*--AUDIO PAGE --*/
+
+	#audio-holder	{
+		/*float: left;
+		background-color: #CCC;*/
+		/*width: 629px;*/
+		height: 701px;	
+		padding: 20px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#audio-artwork	{
+		/*float: left;*/
+		background-color: #333;
+		display: block;
+		width: 504px;
+		height: 373px;
+		margin: 0 auto;	
+	}
+	
+	#audio-player	{
+		width: 100%;
+		margin: 20px 0px 10px 0px;	
+	}
+
+/*--PHOTO PAGE--*/
+			
+.thumb-photos	{
+	float: left;
+	text-align: right;
+	width: 160px;
+	height: auto;
+	margin: 5px 0px 41px 44px;
+	
+	}
+
+.thumb-photos p	{
+		background-image:url(../images/photo-arrows.jpg);
+		margin: 5px 0px 0px 0px;
+		}
+	
+
+
+
+
+/*---NEWS ARTICLE(NEWS PAGE) --*/
+
+	#main-news-videos	{
+		float: right;
+		width: 420px;
+		height: 415px;
+		margin: 5px;	
+	}
+	
+	.main-videonews-text{
+		width: 190px;
+		height: auto;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 1em;
+		line-height: 1.5em;
+		padding: 12px;	
+	}
+
+
+	#more-news	{
+		float: left;
+		width: 245px;
+		height: auto;
+		background-color: #fcfcfc;
+		border-bottom: solid 1px #ccc;	
+	}
+	
+	#more-news ul	{
+		list-style: none;
+		background-color: #fcfcfc;
+		padding: 2px 0px 0px 10px;	
+	}
+	
+	#footer-banner	{
+		float: left;
+		width: 630px;
+		height: 91px;
+		/*background-color: #f97474;*/
+		margin: 10px 7px 7px 7px;
+		overflow: hidden;	
+	}
+
+	#footer-banner-news	{
+		float: left;
+		width: 630px;
+		height: 91px;
+		/*background-color: #f97474;*/
+		margin: 0px 7px 7px 7px;
+		overflow: hidden;	
+	}
+	
+
+/*---NEWS ARTICLE(NEWS PAGE) --*/
+
+.news-article-01	{
+		float: left;
+		/*width: 718px;*/
+		width: 650px;
+		height: auto;
+		/*height: 133px;*/
+		background-color: #fff;
+		border-top: 1px solid #f1f1f1;
+		border-bottom: 1px solid #f1f1f1;
+		margin: 0px 0px 10px 0px;
+}
+
+/*.news-article-01:hover	{
+		float: left;
+		width: 718px;
+		height: 133px;
+		background-color: #5f737a;
+		border-top: 1px solid #f1f1f1;
+		border-bottom: 1px solid #f1f1f1;
+		margin: 0px 0px 10px 0px;
+}
+
+.news-article-01:hover	{
+		color: #fff;
+		display: inline-block;
+}*/
+
+
+
+
+.news-article-02	{
+		float: left;
+		/*width: 740px;*/
+		width: 650px;
+		height: auto;
+		/*height: 133px;*/
+		background-color: #f9f9f9;
+		border-top: 1px solid #f1f1f1;
+		border-bottom: 1px solid #f1f1f1;
+		margin: 0px 0px 10px 0px;
+		
+
+}
+
+
+.news-article-03	{
+		float: left;
+		/*width: 740px;*/
+		width: 650px;
+		height: 133px;
+		background-color: #f9f9f9;
+		border-top: 1px solid #f1f1f1;
+		border-bottom: 1px solid #f1f1f1;
+		margin: 0px 0px 0px 0px;
+		
+
+}
+
+
+
+
+.fb-news-btn	{
+	float: left;
+	width: 100px;
+	margin: 4px 5px 5px 5px;	
+}
+
+	
+
+/*------VIDEOS-------*/
+
+	.fpmain-video-holder	{
+		float: left;
+		background-color: #f9f9f9;
+		height: auto;
+		width: 600px;
+		border: solid 1px #f1f1f1;
+		margin: 0px 0px 33px 20px;
+		padding: 10px;
+	}
+
+
+	.main-video-holder	{
+		float: left;
+		background-color: #f9f9f9;
+		height: 420px;
+		width: 600px;
+		border: solid 1px #f1f1f1;
+		margin: 0px 0px 0px 20px;
+	}
+	.main-video	{
+		float: left;
+		background-color: #333;
+		height: 363px;
+		width: 600px;	
+		margin: 10px 0px 0px 0px;	
+	}
+	
+	#video-sub-text	{
+		float: left;
+		width: 200px;
+		margin: 0px 0px 0px 250px;	
+		text-align: center;
+	}
+	
+	.tb-video-holder	{
+		float: left;
+		background-image: url(../../images/tb-bkgrd.jpg);
+		background-repeat: repeat-x;
+		background-color: #fff;
+		height: auto;
+		width: 586px;	
+		margin: 5px 0px 0px 0px;
+		padding: 10px 20px 20px 40px;
+		border-top: solid 1px #f1f1f1; 
+		overflow: auto;
+	}
+	
+	.tb-video	{
+		float: left;
+		height: 200px;
+		width: 120px;
+		margin: 10px 5px 0px 20px;
+	}
+	
+	#video-navigation	{
+		float: left;
+		background-color: #000;
+		height: 40px;
+		width: 194px;	
+	}
+	
+
+/*---------CONTACT FORM-------*/
+
+	.form-holder	{
+		float: left;
+		background-color: #f9f9f9;
+		height: auto;
+		width: 600px;
+		border: solid 1px #f1f1f1;
+		margin: 10px 0px 10px 20px;
+	}
+
+	#contact-table	{
+		border-collapse: collapse;
+		width: 500px;
+	}
+	
+#contact-table th, #contact-table td { 
+	padding: 0.5em; 
+}
+
+#contact-table tr th.form-header { 
+	color: #666; 
+	/*background-color: #ebebeb;*/
+	font-size: 1.2em;
+	padding: 0.5em;
+	text-align: right;
+	letter-spacing: .25em;
+	vertical-align: middle;
+}
+
+#contact-table tr  { 
+	text-align: left;
+}
+
+
+	
+	.input	{
+			font-size: 1.5em;
+			font-color:#333;
+		height: 30px;
+		width: 300px;	
+	}
+
+	#submit	{
+		float: right;
+		width: 70px;
+		margin: 5px 65px 5px 0px;	
+	}
+	
+/*-------FOOTER------------------*/
+	#footer-holder	{
+	float: left;
+	height: 50px;
+	width: 933px;
+	background-color: #2e2e2e;	
+	margin: 0px 0px 0px 117px;
+	}
+	#footer	{
+		float: left;
+		height: 50px;
+		width: auto;
+		/*background-color: #2e2e2e;*/
+		margin: 0px 0px 0px 60px;
+		
+	}
+
+	
+	#copyright	{
+		font-family:Verdana, Geneva, sans-serif;
+			color: #CCC;
+			font-size: .75em;
+			text-align: center;
+		height: auto;
+		margin: 15px 0px 0px 0px;
+		/*background-color: #033;*/	
+	}
+	
+	#designed	{
+		float: left;
+		height: 20px;
+		width: 933px;
+		background-color: #fff;
+		font-family: Verdana, Geneva, sans-serif;
+			color: #b5011a;
+		}
+#designed p	{
+	margin: 0px 0px 0px 20px;	
+}
+		
+	
+/*--------TYPOGRAPHY--------------*/
+.date	{
+	font-weight: bold;
+	color: #900;	
+}
+
+.address{
+	font-weight: bold;
+	color: #666;	
+}
+
+
+.fp-news-caption-holder	{
+	width: 600px;
+	margin: 0 auto;
+	
+}
+.fp-news-captions	{
+	font-family: Verdana, Geneva, sans-serif;
+		font-size: 1em;
+		margin: 5px 0px 5px 0px;
+		/*text-align: center;*/
+		
+}
+
+#download	{
+		font-size: 1em;
+		text-align: center;
+		color: #360d0d;	
+		margin: 5px 5px 10px 5px;;
+}
+
+#download a	{
+		font-weight: bold;
+		color: #ccc;	
+		}
+
+
+#head-line	{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 1.5em;
+		color: #333;
+		font-weight: bolder;
+		margin: 5px 0px 5px 5px;	
+
+	
+}
+h1	{
+	font-family: Verdana, Geneva, sans-serif;
+		font-size: 1.5em;
+		color: #333;
+		font-weight: bolder;
+		margin: 5px 0px 5px 0px;	
+}
+
+h1 a	{
+	font-family: Verdana, Geneva, sans-serif;
+		color: #333;
+		font-weight: bolder;
+		margin: 5px 0px 5px 0px;
+		text-decoration: none;	
+}
+h1 a:hover	{
+	font-family: Verdana, Geneva, sans-serif;
+		color: #560001;
+		font-weight: bolder;
+		margin: 5px 0px 5px 0px;
+		text-decoration: none;	
+}
+
+
+
+
+h2	{
+	font-family: Verdana, Geneva, sans-serif;
+		font-size: 1em;
+		color: #fff;
+			font-weight: bolder;
+			line-height: 2em;
+	background-color: #333;
+	height: 30px;
+	margin: 5px 0px 5px 0px;	
+	padding: 2px 0px 0px 10px;
+}
+
+.caps	{
+	font-family: Verdana, Geneva, sans-serif;
+		font-size: 1.75em;
+		color: #5b5b5b;
+		text-align: left;
+		/*background-image: url(../../images/heading-bg-strp.jpg);*/
+			background-repeat: no-repeat;
+			height: 27px;
+		/*background-color: #6d8b96;*/
+		margin: 5px 0px 5px -10px;
+		padding: 3px 20px 5px 8px; 
+		/*border-bottom: solid 2px #CCC;
+		border-top: solid 2px #999;	*/
+}
+
+h4 {
+font-size: 28px;
+padding-bottom: 5px;
+/*border-bottom: 3px solid #2a2a2a;*/
+letter-spacing: -1px;
+color: #2A2A2A;
+margin-top: 15px;
+margin-bottom: 0px;
+margin-left: 15px;
+margin-right: 10px;
+}
+
+h5	{
+	font-family: Verdana, Geneva, sans-serif;
+		font-size: 1em;
+		color: #fff;
+			font-weight: bolder;
+			line-height: 2em;
+			letter-spacing: 4px;
+			text-align: center;
+			text-transform:capitalize;
+	background-color: #333;
+	height: 30px;
+	margin: 5px 0px 5px 0px;	
+	padding: 2px 0px 0px 10px;
+}
+
+#contact-thanks	{
+	font-size: 1.25em;
+	color: #900;
+	text-align: center;
+	border-bottom: solid 2px #CCC;
+	margin: 0px 0px 22px 0px;	
+}
+
+
+h3 a	{
+	font-family: Tahoma, Geneva, sans-serif;
+		color: #fff;	
+}
+
+h3.fp-videos	{
+		clear:left;
+				font-family: Verdana, Geneva, sans-serif;
+		font-size: 1.4em;
+		color: #fff;
+		font-weight: bolder;
+	background-image:url(../images/htags-bg.jpg);
+	background-repeat: no-repeat;
+	padding: 7px 5px 5px 19px;
+	margin: 5px 0px 5px 0px;	
+	height: auto;
+	width: 650px;
+	letter-spacing: 1px;
+	/*text-transform: uppercase;*/
+	
+}
+
+h3.tb-tite	{
+			font-family: Arial, Helvetica, sans-serif;
+		font-size: 1em;
+		color: #3d3d3d;
+			font-weight: bolder;
+			text-align: right; 
+
+}
+
+p.tb-desc	{
+	font-family: Arial, Helvetica, sans-serif;
+		color: #3d3d3d;
+		text-align: right;	
+	font-weight: lighter;
+}
+
+p.tb-time	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #3d3d3d;
+		font-weight: bolder;
+		text-align: right;	
+}
+p.views-post	{
+	font-family: Arial, Helvetica, sans-serif;
+		font-size: .75em;
+		color: #3d3d3d;
+		text-align: right; 	
+		font-style: italic;
+
+}
+
+p.main-video-title	{
+	font-family: Arial, Helvetica, sans-serif;
+		font-size: 1em;
+			text-align:center;	
+			color: #3d3d3d;
+			font-weight: bold;
+		margin: 0px;
+
+/*			line-height: 2em;
+	height: 30px;
+	padding: 2px 0px 0px 10px;*/
+}
+
+p.main-video-post-dates	{
+	font-family: Arial, Helvetica, sans-serif;
+		font-size: .75em;
+		color: #3d3d3d;
+			font-weight: lighter;
+			font-style: italic;
+			text-align:center;
+		margin: 0px;	
+
+/*			line-height: 2em;
+	height: 30px;
+	margin: 5px 0px 5px 0px;	
+	padding: 2px 0px 0px 10px;*/
+}
+
+
+
+	.fplastupdated	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: .75em;
+			color: #333;	
+		margin: 0px 0px 0px 23px;
+	}
+	
+	.fppost-by	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: 1em;
+			color: #333;
+		margin: 0px 0px 0px 23px;
+		
+	}
+
+	.lastupdated	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: .75em;
+			color: #333;
+			margin: 0px 0px 0px 10px;	
+	}
+	
+	.post-by	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: 1em;
+			color: #333;
+			margin: 0px 0px 0px 10px;	
+			
+	}
+	
+	
+	
+	.venue-info	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: 1em;
+			color: #000;
+			/*font-weight: bold;*/
+			margin: 0px 0px 2px 0px;	
+	}
+	
+	.article-text	{
+		font-family: Verdana, Geneva, sans-serif;
+			font-size: 1em;
+			color: #333;
+			/*width: 400px;*/
+			line-height: 1.5em;
+			padding: 12px;
+				
+	}
+	
+	
+	
+	
+/*------IMAGES-------*/
+
+
+	.headers	{
+		width: %100;	
+	}
+	.fpnews-artwork	{
+		
+		display:block;
+		margin: 0 auto;	
+	}
+	#audio-media	{
+		float: left;
+		height: 373px;
+		width: 	504px;
+		background-color: #CCC;	
+	}
+	#photo-media	{
+		float: left;
+		height: 373px;
+		width: 	504px;
+		background-color: #CCC;	
+	}
+	#video-media	{
+		float: left;
+		height: 373px;
+		width: 	504px;
+		background-color: #CCC;	
+		margin: 10px 10px 10px 110px;
+	}
+
+	#widebanner	{
+		float: left;
+		width: 630px;
+		height: 91px;
+		/*background-color: #f97474;*/
+		margin: 7px;
+		overflow: hidden;	
+	}
+
+	.article-pic-01	{
+		float: right;
+		margin: 5px 5px 5px 5px;
+		height: 250px;
+		}
+		
+	.bio-pic-01	{
+		float: right;
+		margin: 5px 5px 5px 5px;
+		height: 450px;
+		}
+	.bio-pic-02	{
+		float: left;
+		height: 293px;
+		margin: 23px 10px 10px 4px;
+		}
+		
+		.rdw-img	{
+			float: right;
+			margin: 5px;
+			height: 260px;	
+		}
+		
+	.skyscraper-banners	{
+		float: right;
+		margin: 10px 0px 10px 0px;	
+		
+	}
+
+	.news-tb	{
+		float: left; 
+		height: 90%;
+		margin: 5px 10px 5px 30px;	
+	}
+	
+/*----SOCIAL MEDIA---*/
+	.fpsocial-media-links	{
+		float: left;
+		width: 680px;
+		height: 50px;
+		margin: 5px 0px 5px 23px;
+	}
+	
+	.social-media-links	{
+		float: left;
+		width: 597px;
+		height: 50px;
+		margin: 5px 20px 5px 10px;
+	}
+	
+	.twitter-button	{
+		float: left;
+		width: 100px;
+	}
+	.fb-button	{
+		float: left;
+		width: 300px;
+	}
+	
+/*---LINKS---*/
+
+a	{
+	color: #999;	
+}
+
+a:hover	{
+	color: ff0000;	
+}
+
+
+/*-----------SLIDESHOW------------*/
+.slideshow { 
+	float: left;
+	height: 232px; 
+	width: 933px; 
+	/*margin: auto*/ 
+}
+
+.slideshow img { 
+	/*padding: 10px 10px 10px 13px;*/
+	margin: auto; 
+	width: 100%;
+	/*border: 1px solid #ccc; 
+	background-color: #eee; */
+}

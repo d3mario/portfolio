@@ -1,0 +1,528 @@
+@media screen and (min-width: 320px ) and (max-width: 699px){
+
+        #divider {
+            display: none;
+        }
+
+        .methods, .methods-list {
+            display: none;
+        }
+    ul#valued-icons, ul#contact-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Antipasto;
+        font-weight: 400;
+        font-size: 1em;
+        padding: 0em;
+    }
+    ul#valued-icons li {
+
+        font-family: Antipasto;
+        font-size: 1.75em;
+        color: #999999;
+        font-weight: 400;
+        text-align: center;
+        list-style: none;
+        /*float: left;*/
+    }
+    ul#valued-icons li.details {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .details {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    #valued-icons .email-details {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    ul#valued-icons li#time-management{
+        flex: 1;
+        height: 200px;
+        background: url("../images/value-icons.png") repeat scroll -20px 655px transparent;
+        width: 145px;
+    }
+
+    #valued-icons #time-management a {
+        /*float: left;*/
+
+        height: 200px;
+    }
+
+    #valued-icons a {
+        display: block;
+    }
+    #valued-icons #customer-satisfaction {
+        height: 200px;
+        background: url("../images/value-icons.png") repeat scroll -335px 655px transparent;
+        width: 145px;
+    }
+    #valued-icons #customer-satisfaction a {
+        height: 200px;
+    }
+
+    #valued-icons #communication{
+        height: 200px;
+        background: url("../images/value-icons.png") repeat scroll -645px 655px transparent;
+        width: 145px;
+    }
+    #valued-icons #communication a {
+        height: 200px;
+    }
+
+    #valued-icons #portfolio-sample{
+        height: 200px;
+        background: url("../images/value-icons.png") repeat scroll 155px 655px transparent;
+        width: 145px;
+    }
+    #valued-icons #portfolio-sample a {
+        height: 200px;
+    }
+
+    /*ul#contact-icons {*/
+        /*font-family: Antipasto;*/
+        /*font-weight: 400;*/
+        /*font-size: 1em;*/
+        /*!*height: 255px;*!*/
+        /*!*margin: 0 auto;*!*/
+    /*}*/
+    ul#contact-icons li {
+        font-family: Antipasto;
+        font-size: 1.75em;
+        color: #999999;
+        font-weight: 400;
+        text-align: center;
+        list-style: none;
+        /*width: 145px;
+        height: 275px;*/
+    }
+    ul#contact-icons li.details {
+        display:none;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    #contact-icons .email-details {
+        display:none;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    /*ul#contact-icons li#large-phone-icon {*/
+        /*!*float: left;*!*/
+        /*height: 200px;*/
+        /*width: 145px;*/
+        /*background: url("../images/sprite-icons.png") repeat scroll 0px 550px transparent;!*margin: 0 auto;*!*/
+    /*}*/
+
+    #large-phone-icon, #facebook-icon, #instagram-icon, #twitter-icon, #email-icon {
+        font-size: 1.75em;
+            text-align: center;
+        margin: 0 auto;
+    }
+     .details{
+         display: none;
+    }
+    #large-phone-icon {
+        /*float: left;*/
+        height: 200px;
+        width: 145px;
+        background: url("../images/sprite-icons.png") repeat scroll 0px 550px transparent;/*margin: 0 auto;*/
+    }
+    #large-phone-icon a, #facebook-icon a, #instagram-icon a, #twitter-icon a, #email-icon a {
+        float: left;
+        height: 200px;
+        width: 145px;
+    }
+    /*#contact-icons #large-phone-icon a {*/
+        /*!*float: left;*!*/
+        /*height: 200px;*/
+    /*}*/
+
+    #contact-icons a {
+        display: block;
+    }
+
+    #email-icon {
+        height: 200px;
+        background: url("../images/sprite-icons.png") repeat scroll -140px 550px transparent;
+        width: 145px;
+    }
+    #email-icon a {
+        height: 200px;
+    }
+
+    #facebook-icon {
+        height: 200px;
+        width: 145px;
+        background: url("../images/sprite-icons.png") repeat scroll -280px 550px transparent;
+    }
+
+   #facebook-icon a {
+        height: 200px;
+    }
+
+
+   #twitter-icon {
+        height: 200px;
+        background: url("../images/sprite-icons.png") repeat scroll -421px 550px transparent;/*margin: 0 auto;*/
+    }
+
+    #twitter-icon a{
+        height: 200px;
+    }
+
+   #instagram-icon {
+        height: 200px;
+        width: 145px;
+        background: url("../images/sprite-icons.png") repeat scroll -560px 550px transparent;/*margin: 0 auto;*/
+    }
+
+     #instagram-icon a {
+        height: 200px;
+    }
+
+    /*#contact-icons #email-icon {*/
+        /*height: 200px;*/
+        /*background: url("../images/sprite-icons.png") repeat scroll -140px 550px transparent;*/
+        /*width: 145px;*/
+    /*}*/
+    /*#contact-icons #email-icon a {*/
+        /*height: 200px;*/
+    /*}*/
+
+    /*#contact-icons #facebook-icon {*/
+        /*height: 200px;*/
+        /*width: 145px;*/
+        /*background: url("../images/sprite-icons.png") repeat scroll -280px 550px transparent;*/
+    /*}*/
+
+    /*#contact-icons #facebook-icon a {*/
+        /*height: 200px;*/
+    /*}*/
+
+
+    /*#contact-icons #twitter-icon {*/
+        /*height: 200px;*/
+        /*background: url("../images/sprite-icons.png") repeat scroll -421px 550px transparent;!*margin: 0 auto;*!*/
+    /*}*/
+
+    /*#contact-icons #twitter-icon a{*/
+        /*height: 200px;*/
+    /*}*/
+
+    /*#contact-icons #instagram-icon {*/
+        /*height: 200px;*/
+        /*width: 145px;*/
+        /*background: url("../images/sprite-icons.png") repeat scroll -560px 550px transparent;!*margin: 0 auto;*!*/
+    /*}*/
+
+    /*#contact-icons #instagram-icon a {*/
+        /*height: 200px;*/
+    /*}*/
+
+
+}
+
+@media screen and (min-width: 700px){
+    /* HOME PAGE VALUED ICONS AREA
+	---------------------------------------------------- */
+    .hidden {
+        display: none;
+    }
+
+    .cta::after {
+        content: "";
+        clear: both;
+        display: table;
+        padding: 3em;
+        background-color: #b51c35;
+    }
+
+    ul#valued-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    ul#valued-icons, ul#contact-icons {
+        font-family: Antipasto;
+        color: #ff0000;
+        font-weight: 400;
+        font-size: 1em;
+        /*padding: 0em;*/
+    }
+
+    /*ul#valued-icons {*/
+        /*font-family: Antipasto;*/
+        /*font-weight: 400;*/
+        /*font-size: 1em;*/
+        /*width: 1200px;*/
+        /*height: 255px;*/
+        /*margin: 0 auto;*/
+        /*padding: 50px 0px 0px 50px;*/
+    /*}*/
+    ul#valued-icons li {
+        font-family: Antipasto;
+        font-size: 1.75em;
+        color: #ff0000;
+        font-weight: 400;
+        text-align: center;
+        list-style: none;
+        float: left;
+        margin: 0px 100px 0px 5px;
+    }
+    ul#valued-icons li.details {
+        text-align: center;
+        font-size: 1.5em;
+        width: 130px;
+        margin: 0px 120px 0px 20px;
+    }
+    #valued-icons .email-details {
+        text-align: center;
+        font-size: 1.5em;
+        width: 200px;
+        margin: 0px 120px 0px 0px;
+    }
+    ul#valued-icons li#time-management{
+        /*float: left;*/
+        height: 200px;
+        width:195px;
+        background: url("../images/value-icons.png") repeat scroll 0px 640px transparent;/*margin: 0 auto;*/
+    }
+
+    #valued-icons #time-management a {
+        /*float: left;*/
+        height: 200px;
+        width:195px;
+    }
+
+    #valued-icons a {
+        display: block;
+    }
+    #valued-icons #customer-satisfaction {
+        /*float: left;*/
+        height: 200px;
+        width:195px;
+        background: url("../images/value-icons.png") repeat scroll -320px 640px transparent;/*margin: 0 auto;*/
+    }
+    #valued-icons #customer-satisfaction a {
+        height: 200px;
+        width:195px;
+    }
+
+    #valued-icons #communication{
+        /*float: left;*/
+        height: 200px;
+        width:195px;
+        background: url("../images/value-icons.png") repeat scroll -630px 640px transparent;/*margin: 0 auto;*/
+    }
+    #valued-icons #communication a {
+        height: 200px;
+        width:195px;
+    }
+
+    #valued-icons #portfolio-sample{
+        /*float: left;*/
+        height: 200px;
+        width:195px;
+        background: url("../images/value-icons.png") repeat scroll 180px 640px transparent;/*margin: 0 auto;*/
+    }
+    #valued-icons #portfolio-sample a {
+        height: 200px;
+        width:195px;
+    }
+
+
+    article#introduction {
+        font-family: Antipasto;
+        font-size: 1.5em;
+        font-weight: 400;
+        float: left;
+        width: 410px;
+        /*height: 305px;*/
+        overflow: hidden;
+        padding: 1em 0em 0em 9em;
+    }
+
+}
+
+/*ul#valued-icons {*/
+    /*font-family: Antipasto;*/
+    /*font-weight: 400;*/
+    /*font-size: 1em;*/
+    /*width: 1200px;*/
+    /*height: 255px;*/
+    /*margin: 0 auto;*/
+    /*padding: 50px 0px 0px 50px;*/
+/*}*/
+/*ul#valued-icons li {*/
+    /*font-family: Antipasto;*/
+    /*font-size: 1.75em;*/
+    /*color: #999999;*/
+    /*font-weight: 400;*/
+    /*text-align: center;*/
+    /*list-style: none;*/
+    /*float: left;*/
+    /*margin: 0px 100px 0px 5px;*/
+/*}*/
+/*ul#valued-icons li.details {*/
+    /*text-align: center;*/
+    /*font-size: 1.5em;*/
+    /*width: 130px;*/
+    /*margin: 0px 120px 0px 20px;*/
+/*}*/
+/*#valued-icons .email-details {*/
+    /*text-align: center;*/
+    /*font-size: 1.5em;*/
+    /*width: 200px;*/
+    /*margin: 0px 120px 0px 0px;*/
+/*}*/
+/*ul#valued-icons li#time-management{*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:195px;*/
+    /*background: url("../images/value-icons.png") repeat scroll 0px 640px transparent;!*margin: 0 auto;*!*/
+/*}*/
+
+/*#valued-icons #time-management a {*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:195px;*/
+/*}*/
+
+/*#valued-icons a {*/
+    /*display: block;*/
+/*}*/
+/*#valued-icons #customer-satisfaction {*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:195px;*/
+    /*background: url("../images/value-icons.png") repeat scroll -320px 640px transparent;!*margin: 0 auto;*!*/
+/*}*/
+/*#valued-icons #customer-satisfaction a {*/
+    /*height: 200px;*/
+    /*width:195px;*/
+/*}*/
+
+/*#valued-icons #communication{*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:195px;*/
+    /*background: url("../images/value-icons.png") repeat scroll -630px 640px transparent;!*margin: 0 auto;*!*/
+/*}*/
+/*#valued-icons #communication a {*/
+    /*height: 200px;*/
+    /*width:195px;*/
+/*}*/
+
+/*#valued-icons #portfolio-sample{*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:195px;*/
+    /*background: url("../images/value-icons.png") repeat scroll 180px 640px transparent;!*margin: 0 auto;*!*/
+/*}*/
+/*#valued-icons #portfolio-sample a {*/
+    /*height: 200px;*/
+    /*width:195px;*/
+/*}*/
+
+/*ul#contact-icons {*/
+    /*font-family: Antipasto;*/
+    /*font-weight: 400;*/
+    /*font-size: 1em;*/
+    /*width: 1200px;*/
+    /*height: 255px;*/
+    /*margin: 0 auto;*/
+    /*padding: 50px 0px 0px 100px;*/
+/*}*/
+/*ul#contact-icons li {*/
+    /*font-family: Antipasto;*/
+    /*font-size: 1.75em;*/
+    /*color: #999999;*/
+    /*font-weight: 400;*/
+    /*text-align: center;*/
+    /*list-style: none;*/
+    /*float: left;*/
+    /*!*width: 145px;*/
+    /*height: 275px;*!*/
+    /*margin: 0px 160px 0px 5px;*/
+/*}*/
+/*ul#contact-icons li.details {*/
+    /*text-align: center;*/
+    /*font-size: 1.5em;*/
+    /*width: 130px;*/
+    /*margin: 0px 120px 0px 20px;*/
+/*}*/
+/*#contact-icons .email-details {*/
+    /*text-align: center;*/
+    /*font-size: 1.5em;*/
+    /*width: 200px;*/
+    /*margin: 0px 120px 0px 0px;*/
+/*}*/
+/*ul#contact-icons li#large-phone-icon {*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:135px;*/
+    /*background: url("../images/sprite-icons.png") repeat scroll -10px 550px transparent;!*margin: 0 auto;*!*/
+/*}*/
+
+/*#contact-icons #large-phone-icon a {*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width: 135px;*/
+/*}*/
+
+/*#contact-icons a {*/
+    /*display: block;*/
+/*}*/
+/*#contact-icons #email-icon {*/
+    /*!*float: left;*!*/
+    /*height: 200px;*/
+    /*width:135px;*/
+    /*background: url("../images/sprite-icons.png") repeat scroll -149px 550px transparent;!*margin: 0 auto;*!*/
+/*}*/
+/*#contact-icons #email-icon a {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+/*}*/
+
+/*#contact-icons #facebook-icon {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+    /*background: url("../images/sprite-icons.png") repeat scroll -284px 550px transparent;!*margin: 0 auto;*!*/
+/*}*/
+
+/*#contact-icons #facebook-icon a {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+/*}*/
+
+
+/*#contact-icons #twitter-icon {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+    /*background: url("../images/sprite-icons.png") repeat scroll -421px 550px transparent;!*margin: 0 auto;*!*/
+/*}*/
+
+/*#contact-icons #twitter-icon a{*/
+    /*height: 200px;*/
+    /*width:135px;*/
+/*}*/
+
+/*#contact-icons #instagram-icon {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+    /*background: url("../images/sprite-icons.png") repeat scroll -561px 550px transparent;!*margin: 0 auto;*!*/
+/*}*/
+
+/*#contact-icons #instagram-icon a {*/
+    /*height: 200px;*/
+    /*width:135px;*/
+/*}*/
+
+/***************************************RESPONSIVE STYLES***************************/
+
+

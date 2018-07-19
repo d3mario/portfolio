@@ -1,0 +1,271 @@
+
+@media screen and (max-width: 768px) and (min-width: 240px) {
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 76%;
+    margin: 0;
+    padding: 0;
+}
+#container {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#wrapper {
+    float: left;
+    width: 100%;
+}
+#inner-wrapper {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#content-main {
+    float: left;
+    margin: 0;
+    padding: 2%;
+    width: 96%;
+}
+.main-menu {
+    background: url("../../../everything_hair_and_nails/images/bg-logo.png") no-repeat scroll left top #98AC68;
+    color: #ABC5CB;
+    float: right;
+    font: bold 1.1em/44px Arial,Helvetica,sans-serif;
+    padding: 2% 3% 0 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 97%;
+}
+#pull {
+    margin: 1% 0 0;
+}
+nav {
+  background-image: url(../../../everything_hair_and_nails/images/nav-bg.jpg);
+	  background-repeat: repeat-x;
+  background-color: #666;	
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul {
+    background: none repeat scroll 0 0 #677742;
+    clear: both;
+    display: none;
+    height: auto;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul li {
+    border-top: 1px solid #424D2B;
+    margin: 0;
+    padding: 3.5% 0;
+    text-align: right;
+    width: 100%;
+}
+nav ul li a {
+    color: #FFFFFF;
+    font: bold 1.3em "Dosis-Regular",Arial,Helvetica,sans-serif;
+    padding: 0 3% 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+hgroup {
+    border-bottom: 1px solid #CCCCCC;
+    margin: 20px 0 0;
+    padding: 0 0 5px;
+}
+h1 {
+    color: #98AC68;
+    font: 2.8em "CrimsonText-Roman","Times New Roman",Times,serif;
+    margin: 0;
+}
+h2 {
+    color: #AAAAAA;
+    font: 1.15em Arial,Helvetica,sans-serif;
+    margin: -3px 0 0;
+    text-transform: uppercase;
+}
+article {
+    margin: 30px 0 0;
+}
+h3 {
+    color: #6C7E45;
+    font: bold 1.2em Arial,Helvetica,sans-serif;
+    margin: 30px 0 -12px;
+    text-transform: uppercase;
+}
+p, ul {
+    color: #7F7F7F;
+    font: 1.2em/1.4em Arial,Helvetica,sans-serif;
+}
+article a.link {
+    background: none repeat scroll 0 0 #E7E7E7;
+    border-radius: 10px 10px 10px 10px;
+    color: #666666;
+    padding: 2px 7px;
+    text-decoration: none;
+}
+article a:hover {
+    background: none repeat scroll 0 0 #D6D6D6;
+    color: #333333;
+}
+footer {
+    border-top: 1px solid #CCCCCC;
+    float: left;
+    margin: 10% 0 0;
+    padding: 10% 0 0;
+    text-align: center;
+    width: 100%;
+}
+footer a {
+    background: none repeat scroll 0 0 #8DA558;
+    border: 3px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    color: #FFFFFF;
+    font: italic bold 1.2em/35px Arial,Helvetica,sans-serif;
+    height: 35px;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    width: 130px;
+}
+.stage-wrapper {
+    border-top: 1px solid #CCCCCC;
+    float: left;
+    margin: 25px 0 0;
+    padding: 25px 0 0;
+    text-align: center;
+    width: 100%;
+}
+.stage-wrapper h4 {
+    color: #6C7E45;
+    font: bold 1.25em Arial,Helvetica,sans-serif;
+    margin: 20px 0 -12px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.stage-wrapper p {
+    text-align: left;
+}
+#portfolio-type {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 620px;
+}
+ul#portfolio-type {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+ul#portfolio-type li {
+    float: left;
+    margin: 0 0 50px;
+    padding: 0 10px 0 0;
+}
+ul#portfolio-type li a {
+    background: none repeat scroll 0 0 #D6D6D6;
+    border: 1px solid #E4E4E4;
+    border-radius: 10px 10px 10px 10px;
+    color: #666666;
+    font: 1.3em Arial,Helvetica,sans-serif;
+    padding: 7px 10px;
+    text-decoration: none;
+}
+ul#portfolio-type li a:hover {
+    background: none repeat scroll 0 0 #E7E7E7;
+}
+@font-face {
+    font-family: "CrimsonText-Roman";
+    src: url("../../../everything_hair_and_nails/fonts/CrimsonText-Roman.ttf");
+}
+@font-face {
+    font-family: "Dosis-Regular";
+    src: url("../../../everything_hair_and_nails/fonts/Dosis-Regular.ttf");
+}
+.icon, .icon a {
+    border: 0 none;
+    float: left;
+    padding: 0 5px 0 0;
+}
+img a {
+    border: 0 none;
+}
+.no-border {
+    border: 0 none;
+}
+.gallery {
+    border: 1px solid #666666;
+    float: left;
+    margin: 0 5px 5px 0;
+}
+.wrap-profile {
+    float: left;
+    padding: 20px 10px 0 0;
+}
+ul#social-list {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+ul#social-list li {
+    float: left;
+    margin: 0 15px 0 0;
+}
+ul#social-list li a:hover {
+    background: none repeat scroll 0 0 transparent;
+    opacity: 0.5;
+}
+hr {
+    background: none repeat scroll 0 0 #CCCCCC;
+    border: 1px none;
+    float: left;
+    height: 1px;
+    margin: 25px 0 35px;
+    padding: 0;
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+.hide {
+    display: none;
+}
+#blog-wrapper {
+    border-top: 10px solid #98AC68;
+    margin: 0;
+    padding: 5% !important;
+    width: 90%;
+}
+#board {
+    margin-bottom: -1.875em;
+    overflow: hidden;
+    width: 100%;
+}
+#blog-wrapper a {
+    color: #98AC68;
+    text-decoration: none;
+}
+.note {
+    clear: both;
+    float: left;
+    margin-bottom: 1.875em;
+    width: 100%;
+}
+.reveal-modal {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    float: left !important;
+    left: 0 !important;
+    margin: 0 auto 0 5px !important;
+    padding: 10px !important;
+    width: 90% !important;
+    z-index: 101;
+}
+}
