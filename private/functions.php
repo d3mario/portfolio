@@ -69,9 +69,8 @@ function getPage($id)
     }
 
     // Use returned data (if any)
-    while ($page = mysqli_fetch_assoc($result_set)) {
-        echo $page["name"] . "<br />";
-    }
+    $page = mysqli_fetch_assoc($result_set);
+    return $page;
     mysqli_free_result($result_set);
 
 }

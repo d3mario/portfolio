@@ -6,6 +6,8 @@ define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
 include_once ('db_credentials.php');
 require_once ('functions.php');
+require_once ('client.php');
+
 
 //  Create a database connection
 $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
