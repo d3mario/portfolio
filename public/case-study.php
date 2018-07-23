@@ -27,12 +27,27 @@ $clientInfo = array(
     <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
     <article id="media-display">
         <div class="content" rel="js-content">
-            <div class="item sample1" rel="js-item-0">
-                <?php
-                foreach($clientCompositions as $comp)
-                    ?><a href="#" rel="viewLargeDisplay01"><img class="slide" src=images/<?php echo($comp) ?> alt=" "></a>
-            </div>
+            <?php
+            $count = 1;
+            foreach($clientCompositions as $comp)
+            {
+                echo (
+                "<div class=\"item sample$count\">
+                <a href=\"#\" rel=\"viewLargeDisplay0".$count."\"><img class=\"slide\" src=images/$comp alt=\" \"></a>
+            </div>");
+                $count++;
+            }
+            ?>
         </div>
+        <?php
+        $imageNumber = count($clientCompositions);
+            if (1 < $imageNumber )
+            {
+                echo ("<button id=\"prevButton\" rel=\"js-case-study-left-button\"></button>
+                <button id=\"nextButton\" rel=\"js-case-study-right-button\"> </button>");
+            }
+
+                ?>
         <p>
             <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
         </p>

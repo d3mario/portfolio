@@ -14,26 +14,31 @@ if(!isset($pageTitle))
     <!-- Style declorations: Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Style declorations: Personal -->
-    <link rel="stylesheet" href="../public/css/layout.css" >
-    <link rel="stylesheet" href="../public/css/stylesheet.css">
-    <link rel="stylesheet" href="../public/css/large-browser.css">
-    <link rel="stylesheet" href="../public/css/responsive.css">
-    <link rel="stylesheet" href="../public/css/typography.css">
-    <link rel="stylesheet" href="../public/css/list-styles.css">
+    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/layout.css" >-->
+<!--    <link rel="stylesheet" href="css/stylesheet.css">-->
+<!--    <link rel="stylesheet" href="css/large-browser.css">-->
+<!--    <link rel="stylesheet" href="css/responsive.css">-->
+<!--    <link rel="stylesheet" href="css/typography.css">-->
+<!--    <link rel="stylesheet" href="css/list-styles.css">-->
     <title><?php echo $pageTitle; ?></title>
 </head>
 
 <body>
 <div id="container">
     <header>
-        <nav id="nav">
-            <ul>
-                <li ><a href="index.php">Home</a></li>
-                <li> <a href="portfolio.php">Portfolio </a></li>
-                <li> <a href="services.php?page=112">About </a></li>
-                <li> <a href="contact.php">Contact </a></li>
-            </ul>
-        </nav>
+        <div class="center">
+            <a href="http://www.d3mario.com"><img src="images/d3mario-logo.png" id ="main-logo" alt="DeMario Windom | Online Portfolio" /></a>
+            <button class="hamburger" rel="js-mobile-navigation-toggle" >☰</button>
+            <nav id="nav">
+                <ul>
+                    <li ><a href="index.php">Home</a></li>
+                    <li> <a href="portfolio.php">Portfolio </a></li>
+                    <li> <a href="services.php?page=112">About </a></li>
+                    <li> <a href="contact.php">Contact </a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div id="slide-show">
