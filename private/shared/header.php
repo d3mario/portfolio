@@ -21,7 +21,6 @@ if(!isset($title))
 
     <title><?php echo ($title.'| DeMario Windom'); ?></title>
 </head>
-
 <body>
 <div id="container">
     <header>

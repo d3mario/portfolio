@@ -39,3 +39,5 @@ src/Email.php
 id_rsa
 
 /vendor/
+
+node_modules/
