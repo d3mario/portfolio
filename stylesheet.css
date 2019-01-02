@@ -89,6 +89,7 @@ a {
   background-color: transparent;
 }
 
+
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -667,7 +668,7 @@ table {
 }
 
 .bg-orange-darkest {
-  background-color: #462a16;
+  background-color: #e45136;
 }
 
 .bg-orange-darker {
@@ -779,7 +780,7 @@ table {
 }
 
 .bg-blue-darkest {
-  background-color: #12283a;
+  background-color: #424d55;
 }
 
 .bg-blue-darker {
@@ -1575,7 +1576,7 @@ table {
 }
 
 .border-grey-lighter {
-  border-color: #f1f5f8;
+  border-color: #f0f0f0;
 }
 
 .border-grey-lightest {
@@ -5066,7 +5067,7 @@ table {
 }
 
 .text-blue-darkest {
-  color: #12283a;
+  color: #424d55;
 }
 
 .text-blue-darker {
