@@ -1,6 +1,6 @@
 <?php
     include '../private/initalize.php' ;
-    $title = "Portfolio ";
+    $title = "Web Developer";
     include(SHARED_PATH .'/header.php');
 
 //    include 'includes/main-slider-show.php';
@@ -9,8 +9,8 @@
     <h1> What do you value</h1>
 
     <ul id="valued-icons">
-        <li id="time-management"><a href="services.php?page=112">Time Management:</a></li>
-        <li id="customer-satisfaction"><a href="testimonies.php">Customer Satisfaction:</a></li>
+        <li id="time-management"><a href="about.php">Time Management:</a></li>
+        <li id="customer-satisfaction"><a href="testimony.php">Customer Satisfaction:</a></li>
         <li id="communication"><a href="contact.php">Great Communication:</a></li>
         <li id="portfolio-sample"><a href="portfolio.php">Quality Material:</a></li>
     </ul>

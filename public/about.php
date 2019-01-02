@@ -1,10 +1,11 @@
 <?php
 include ('../private/initalize.php');
-$title = "Portfolio ";
+$title = "About ";
 include(SHARED_PATH .'/header.php');
 
 
-$page = isset($_GET['page']) ? $_GET['page'] : '';
+//$page = isset($_GET['page']) ? $_GET['page'] : '';
+$page = '112';
 $error = isset($_GET['error']);
 $view ='';
 
@@ -24,64 +25,63 @@ $clientInfo = array(
     "clientCaseStudyBrief" =>$clientCaseStudyBrief,
 );
 ?>
-<div id="content-area">
-    <h1 class="portfolio-question-header"> Do you agree</h1>
-    <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
-    <article id="media-display">
-        <div class="content" rel="js-content">
-            <?php
-            //dowhileloop
-            $count = 1;
-            foreach($clientSmallCompositions as $comp)
-            {
-                echo (
-                "<div class=\"item sample$count\">
+    <div id="content-area">
+        <h1 class="portfolio-question-header"> Do you agree</h1>
+        <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
+        <article id="media-display">
+            <div class="content" rel="js-content">
+                <?php
+                $count = 1;
+                foreach($clientSmallCompositions as $comp)
+                {
+                    echo (
+                        "<div class=\"item sample$count\">
                 <a href=\"#\" rel=\"viewLargeDisplay0".$count."\"><img class=\"slide\" src=images/$comp alt=\" \"></a>
             </div>");
-                $count++;
-            }
-            ?>
-        </div>
-        <?php
-        $imageNumber = count($clientSmallCompositions);
+                    $count++;
+                }
+                ?>
+            </div>
+            <?php
+            $imageNumber = count($clientSmallCompositions);
             if (1 < $imageNumber )
             {
                 echo ("<button id=\"prevButton\" rel=\"js-case-study-left-button\"></button>
                 <button id=\"nextButton\" rel=\"js-case-study-right-button\"> </button>");
             }
 
-                ?>
-        <p>
-            <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
-        </p>
-    </article>
-    <article id="inside">
-        <h3><?php echo($clientInfo["clientName"]); ?></h3>
-        <p><?php echo ($clientInfo["clientCaseStudyBrief"]);?></p>
-        <p class="case"><?php echo ($clientInfo["clientCaseStudy"]);?></p>
-        <h5 class="methods">Methods</h5>
-        <ul class="methods-list">
-            <?php
-            foreach ($clientMethods as $clientMethodInfo){
-                echo('<li>'.$clientMethodInfo.'</li>');
-            }?>
+            ?>
+            <p>
+                <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
+            </p>
+        </article>
+        <article id="inside">
+            <h3><?php echo($clientInfo["clientName"]); ?></h3>
+            <p><?php echo ($clientInfo["clientCaseStudyBrief"]);?></p>
+            <p class="case"><?php echo ($clientInfo["clientCaseStudy"]);?></p>
+            <h5 class="methods">Methods</h5>
+            <ul class="methods-list">
+                <?php
+                foreach ($clientMethods as $clientMethodInfo){
+                    echo('<li>'.$clientMethodInfo.'</li>');
+                }?>
 
-        </ul>
-        <p id="button">View More</p>
-    </article>
+            </ul>
+            <p id="button">View More</p>
+        </article>
 
-</div>
+    </div>
     <div id="modal" rel="js-modal">
         <?php
 
         //$largeImageCount == $count;
         //$largeClientCompositionsViews = $client->getClientCompositonViews();
-//        foreach($clientLargeCompositions as $largeComp)
-//        {
-//            echo ("<img class=\"modal-image\" src=images/$largeComp alt=\" \" rel=\"largeModalImage viewLargeDisplay0\">");
-////            $count++;
-//        }
-                    echo ("<img class=\"modal-image\" src=images/$clientLargeCompositions[0] alt=\" \" rel=\"largeModalImage\">");
+        //        foreach($clientLargeCompositions as $largeComp)
+        //        {
+        //            echo ("<img class=\"modal-image\" src=images/$largeComp alt=\" \" rel=\"largeModalImage viewLargeDisplay0\">");
+        ////            $count++;
+        //        }
+        echo ("<img class=\"modal-image\" src=images/$clientLargeCompositions[0] alt=\" \" rel=\"largeModalImage\">");
 
         ?>
     </div>

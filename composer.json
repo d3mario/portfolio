@@ -1,0 +1,13 @@
+{
+    "name": "demario/d3mario.com",
+    "authors": [
+        {
+            "name": "DeMario Windom",
+            "email": "iid3mario@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    }
+}

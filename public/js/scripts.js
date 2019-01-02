@@ -23,12 +23,13 @@ $(function()
     var $submitEmail = $("[rel=submitEmailButton]");
     var $viewLargeDisplay01 = $("[rel=viewLargeDisplay01]");
     var $viewLargeDisplay02 = $("[rel=viewLargeDisplay02]");
+    var $viewLargeDisplay03 = $("[rel=viewLargeDisplay03]");
     var $closeModal = $("#services-heading");
     var $largeModalImage = $("[rel=largeModalImage]");
     var $viewServicesProvided = $("[rel=servicesProvided]");
     var $viewResume = $("[rel=viewResume]");
     var $resumeDisplay = $("[rel=js-resume-modal]");
-    var firstImage, secondImage;
+    var firstImage, secondImage, thirdImage;
     var i = 1;
     var $mobileNavigationToggle = $("[rel=js-mobile-navigation-toggle]");
     var $mobileNavigationPanel= $("[rel=js-mobile-navigation-panel]");
@@ -41,6 +42,7 @@ $(function()
     $mobileNavigationToggle.on("click", function(){
         $mobileNavigationPanel.slideToggle("swing");
         $(this).toggleClass('open');
+        console.log("clicked");
     })
 
     function getEmailData(e){
@@ -81,10 +83,11 @@ $(function()
         hideDiv();
     });
 
-    $($leftButton).on("click", fadeDisplayItem)
-    $($rightButton).on("click", fadeDisplayItem)
+    $($leftButton).on("click", fadeDisplayItem);
+    $($rightButton).on("click", fadeDisplayItem);
 
     $($caseStudyRightButton).on("click", function(){
+        console.log('clicked');
         var $image;
         $image = $(".modal-image").attr("src");
         var end = $image.charAt($image.length-5);
@@ -102,28 +105,28 @@ $(function()
     function fadeDisplayItem(attr)
     {
         $(".sample1").fadeToggle(1000);
-            //$largeModalImage[i];
-            var $image;
-            $image = $(".modal-image").attr("src");
-            // var end = $image.charAt($image.length-5);
-            switch (attr)
-            {
+        //$largeModalImage[i];
+        var $image;
+        $image = $(".modal-image").attr("src");
+        // var end = $image.charAt($image.length-5);
+        switch (attr)
+        {
 
-                case '1':
-                    secondImage = $image;
-                    secondImage = secondImage.replace("01", "02");
-                    //$(".modal-image").prop("src", $image);
-                    $(".modal-image").prop("src" , secondImage);
-                    break;
-                case '2':
-                    firstImage = $image;
-                    firstImage = firstImage.replace("02", "01");
-                   // $(".modal-image").removeAttr("src", $image);
-                    $(".modal-image").prop("src" , firstImage);
-                    break;
-                default:
-                    console.log("An error occurred");
-            }
+            case '1':
+                secondImage = $image;
+                secondImage = secondImage.replace("01", "02");
+                //$(".modal-image").prop("src", $image);
+                $(".modal-image").prop("src" , secondImage);
+                break;
+            case '2':
+                firstImage = $image;
+                firstImage = firstImage.replace("02", "01");
+                // $(".modal-image").removeAttr("src", $image);
+                $(".modal-image").prop("src" , firstImage);
+                break;
+            default:
+                console.log("An error occurred");
+        }
 
         //     //$('.list-toggle').click(function() {
         //     var $listSort = $('.list-sort');
@@ -133,13 +136,12 @@ $(function()
         //         $listSort.attr('colspan', 6);
         //     }
         // });
-            //find out what image is showing,
-            //if image is 01, replace 01 with 02
-            //else replace 0 with 02
-            // var $secondImage = $image.replace("01", '0'+i);
-            // $(".modal-image").attr("src" , $secondImage);
-        }
-
+        //find out what image is showing,
+        //if image is 01, replace 01 with 02
+        //else replace 0 with 02
+        // var $secondImage = $image.replace("01", '0'+i);
+        // $(".modal-image").attr("src" , $secondImage);
+    }
 
 
     function slideShowFader()
@@ -263,6 +265,11 @@ $(function()
         e.preventDefault();
         $modal.css('display', 'block');
     });
+    $viewLargeDisplay03.on("click", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        $modal.css('display', 'block');
+    });
 
     $emailButton.on("click", function(e){
         e.stopPropagation();
@@ -270,24 +277,24 @@ $(function()
         $contactModal.css('display', 'block');
     });
 
-    $submitEmail.on("click", function(){
-        var vistorEmailAddress = $("[rel=vistorEmailAddress]").val();
-        var vistorEmailMessage = $("[rel=vistorEmailMessage]").val();
-        var vistorFirstName = $("[rel=vistorFirstName]").val();
-        // var forum = $("[rel=emailForm]");
-
-
-       alert("Hello " + vistorFirstName + "Thank you for your email" );
-
-            $.post("sendmessage.php", {vistorEmailAddress: vistorEmailAddress}, function(data){
-                var status = $("[rel=email_sent_status]");
-                status.html(data);
-
-
-            });
-
-            $contactModal.fadeToggle(1000);
-    });
+    // $submitEmail.on("click", function(){
+    //     var vistorEmailAddress = $("[rel=vistorEmailAddress]").val();
+    //     var vistorEmailMessage = $("[rel=vistorEmailMessage]").val();
+    //     var vistorFirstName = $("[rel=vistorFirstName]").val();
+    //     // var forum = $("[rel=emailForm]");
+    //
+    //
+    //    alert("Hello " + vistorFirstName + "Thank you for your email" );
+    //
+    //         $.post("sendmessage.php", {vistorEmailAddress: vistorEmailAddress}, function(data){
+    //             var status = $("[rel=email_sent_status]");
+    //             status.html(data);
+    //
+    //
+    //         });
+    //
+    //         $contactModal.fadeToggle(1000);
+    // });
 
 
     $viewServicesProvided.on("click", function(e){

@@ -34,7 +34,7 @@
     /*!*width: 494px;*!*/
     /*display: inline-block;*/
 /*}*/
-.sample1,.sample2 {
+.sample1,.sample2,.sample3 {
     position: absolute;
 }
 .sample1 {
@@ -55,6 +55,16 @@
     /*top: -310px;*/
     left: 0px;
     z-index: 8888;
+}
+
+.sample2 {
+    /*width: 494px;*/
+    background-image: url("../images/everything-hair-and-nails/images/everything-hair-and-nails-display-02.png");
+    repeat: no-repeat;
+    /*position: absolute;*/
+    /*top: -310px;*/
+    left: 0px;
+    z-index: 777;
 }
 
 #one {

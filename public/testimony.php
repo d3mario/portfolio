@@ -1,4 +1,5 @@
 <?php
+protect_page();
 include ('../private/initalize.php');
 $title = "Portfolio ";
 include(SHARED_PATH .'/header.php');
@@ -14,9 +15,7 @@ $clientCaseStudy = $client->getClientCaseStudy();
 $clientCaseStudyBrief = $client->getClientCaseStudyBrief();
 $clientMethods = array();
 $clientMethods = $client->getClientsMethods();
-$clientSmallCompositions = $client->getSmallClientCompositionViews();
-$clientLargeCompositions = $client->getLargeClientCompositionViews();
-
+$clientCompositions = $client->getClientCompositonViews();
 
 $clientInfo = array(
     "clientName" => $clientName,
@@ -30,9 +29,8 @@ $clientInfo = array(
     <article id="media-display">
         <div class="content" rel="js-content">
             <?php
-            //dowhileloop
             $count = 1;
-            foreach($clientSmallCompositions as $comp)
+            foreach($clientCompositions as $comp)
             {
                 echo (
                 "<div class=\"item sample$count\">
@@ -43,7 +41,7 @@ $clientInfo = array(
             ?>
         </div>
         <?php
-        $imageNumber = count($clientSmallCompositions);
+        $imageNumber = count($clientCompositions);
             if (1 < $imageNumber )
             {
                 echo ("<button id=\"prevButton\" rel=\"js-case-study-left-button\"></button>
@@ -71,38 +69,6 @@ $clientInfo = array(
     </article>
 
 </div>
-    <div id="modal" rel="js-modal">
-        <?php
-
-        //$largeImageCount == $count;
-        //$largeClientCompositionsViews = $client->getClientCompositonViews();
-//        foreach($clientLargeCompositions as $largeComp)
-//        {
-//            echo ("<img class=\"modal-image\" src=images/$largeComp alt=\" \" rel=\"largeModalImage viewLargeDisplay0\">");
-////            $count++;
-//        }
-                    echo ("<img class=\"modal-image\" src=images/$clientLargeCompositions[0] alt=\" \" rel=\"largeModalImage\">");
-
-        ?>
-    </div>
-    <div id="servicesDisplay" rel="js-service-modal">
-        <div class="modal-content">
-            <div id="lb" rel="js-service-modal">
-                <p id="services-heading"> Services that were provided to: Mobile Mod Center</p>
-            </div>
-
-            <table class="user-list">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </thead><tbody><tr><td colspan="2"><ul class="languages"></ul></td></tr><tr><td class="heading">Web Design</td><td> <div class="progressBar" rel="max 100"><div></div></div></td><td>100%</td></tr><tr><td class="heading"> Brand Development</td><td> <div class="progressBar" rel="max  100"><div></div></div></td><td> 100%</td></tr><tr><td class="heading">LANGUAGES / SOFTWARE </td><td colspan="2"><ul class="languages"><li><span class="samples-text"> Adobe FireWorks </span></li>  </ul></td>            </tr></tbody>
-            </table>
-            <div id="lb-footer"> </div>
-        </div>
-    </div>
 <?php
 include(SHARED_PATH .'/footer.php');
 ?>

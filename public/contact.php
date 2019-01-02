@@ -1,6 +1,6 @@
 <?php
 include '../private/initalize.php' ;
-$title = "Portfolio ";
+$title = "Contact ";
 include(SHARED_PATH .'/header.php');
 ?>
 

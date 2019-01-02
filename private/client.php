@@ -8,7 +8,8 @@ class Client{
     private $clientCaseStudy, $result, $quote, $testimony;
     private $portfolioThumbnail = array();
     private $altDescription = array();
-    private $clientCompositonViews = array();
+    private $clientSmallCompositonViews = array();
+    private $clientLargeCompositonViews = array();
 
     private $website;
     private $language_software = array();
@@ -25,7 +26,9 @@ class Client{
         $this->setClientCaseStudyBrief($client['brief']);
         $this->setClientsMethods($client['methods']);
         $this->setClientsMethods($client["methods"]);
-        $this->setClientCompositonViews($client["small_views"]);
+        $this->setSmallClientCompositonViews($client['small_views']);
+        $this->setLargeClientCompositionViews($client['large_views']);
+
     }
 
     /**
@@ -33,43 +36,43 @@ class Client{
      *
      *
      */
-    private function setClientName($clientName)
+    private function setClientName(String $clientName)
     {
         $this->clientName = $clientName;
     }
 
-    public function getClientName()
+    public function getClientName(): string
     {
         return $this->clientName;
     }
 
-    private function setClientCaseStudy($clientCaseStudy)
+    private function setClientCaseStudy(String $clientCaseStudy)
     {
         $this->clientCaseStudy = $clientCaseStudy;
     }
 
-    public function getClientCaseStudy()
+    public function getClientCaseStudy() : string
     {
         return $this->clientCaseStudy;
     }
 
-    private function setClientCaseStudyBrief($clientCaseStudyBrief)
+    private function setClientCaseStudyBrief(String $clientCaseStudyBrief)
     {
         $this->clientCaseStudyBrief = $clientCaseStudyBrief;
     }
 
-    public function getClientCaseStudyBrief()
+    public function getClientCaseStudyBrief(): String
     {
         return $this->clientCaseStudyBrief;
     }
 
-    private function setClientsMethods($clientMethods)
+    private function setClientsMethods(string $clientMethods)
     {
         $methods = explode(".", $clientMethods);
         $this->clientMethods = $methods;
     }
 
-    public function getClientsMethods()
+    public function getClientsMethods(): array
     {
         return $this->clientMethods;
     }
@@ -77,19 +80,33 @@ class Client{
     /**
      * @return array
      */
-    public function getClientCompositonViews()
+    public function getSmallClientCompositionViews():array
     {
-        return $this->clientCompositonViews;
+        return $this->clientSmallCompositonViews;
     }
 
     /**
      * @param array $clientCompositonViews
      */
-    public function setClientCompositonViews($clientCompositonViews)
+    private function setSmallClientCompositonViews(String $clientSmallCompositonViews)
     {
-        $views = explode(";", $clientCompositonViews);
-        $this->clientCompositonViews = $views;
+        $views = explode(";", $clientSmallCompositonViews);
+        $this->clientSmallCompositonViews = $views;
     }
+    /**
+     * @param array $clientCompositonViews
+     */
+    private function setLargeClientCompositionViews(String $clientLargeCompositonViews)
+    {
+        $views = explode(";", $clientLargeCompositonViews);
+        $this->clientLargeCompositonViews = $views;
+    }
+
+    public function getLargeClientCompositionViews(): array
+    {
+        return $this->clientLargeCompositonViews;
+    }
+
 
 }
 
