@@ -5,7 +5,7 @@
 
 //    include 'includes/main-slider-show.php';
  ?>
-<main id="content-area">
+<main class="xl:p-16">
     <h1> What do you value</h1>
 
     <!-- <ul id="valued-icons">
@@ -15,13 +15,13 @@
         <li id="portfolio-sample"><a href="portfolio.php">Quality Material:</a></li>
     </ul> -->
 <div class="sm:inline-flex md:block lg:flex xl:flex">
-  <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"><a class="no-underline" href="about">Time Management:</a> </div>
-  <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"><a class="no-underline" href="testimony">Customer Satisfaction:</a> </div>
-  <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"><a class="no-underline" href="contact">Relationships:</a> </div>
-  <div class="text-grey-darker text-center bg-grey-light px-4 py-2 m-2"><a class="no-underline" href="portfolio">Quality Material:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="about">Time Management:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="testimony">Customer Satisfaction:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="contact">Relationships:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="portfolio">Quality Material:</a> </div>
 </div>
 
-    <article id="introduction">
+    <!-- <article id="introduction">
         <h2 class="grey">Working for you!</h2>
         <h2>Here for you!</h2>
         <p>As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
@@ -38,7 +38,26 @@
 
         </div>
 
-    </article>
+    </article> -->
+
+    
+
+    <div class="sm:inline-flex md:block lg:flex xl:flex">
+    <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">
+    <div class="mb-8">
+      <div class="text-black font-bold text-xl mb-2">Working for you. Here for you. </div>
+      <p class="text-grey-darker text-base">As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
+            integrity and respect for you and your brand while communicating to the prospective audience with creative
+            material!</p>
+        <p><a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Samples</a></span></p>
+    </div>
+    
+  </div>
+  <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
+    </div>
+    
+
+</div>
 
 
 </main>

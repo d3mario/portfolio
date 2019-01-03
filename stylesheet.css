@@ -783,6 +783,20 @@ table {
   background-color: #424d55;
 }
 
+.bg-footer {
+  background-color: #424d55;
+  height: 80px;
+  background-image: url(public/images/footer-bg.gif);
+  background-repeat: repeat-x;
+  background-color: #424d55;
+}
+
+.bg-header{
+  background-color: #424d55;
+  height: 100px;
+  background-image: url(public/images/header-bg.gif);
+  background-repeat: repeat-x;
+}
 .bg-blue-darker {
   background-color: #1c3d5a;
 }
