@@ -3,7 +3,8 @@ include '../private/initalize.php' ;
 $title = "Portfolio ";
 include(SHARED_PATH .'/header.php');
 ?>
-    <main id="content-area">
+<main class="xl:p-16">
+
         <h1 class ="portfolio-question-header"> Do you agree</h1>
         <h2 class ="question">Quality Material Should Represent Your Brand?</h2>
         <div id="category-tabs">
@@ -66,7 +67,7 @@ include(SHARED_PATH .'/header.php');
             </form>
       	</div>
 
-        <div id="portfolio-body-wrapper">
+    <div class="flex flex-wrap mb-4">
             <?php
             getClients();
             ?>

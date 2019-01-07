@@ -6,19 +6,13 @@
 //    include 'includes/main-slider-show.php';
  ?>
 <main class="xl:p-16">
-    <h1> What do you value</h1>
+    <h1 class="text-center"> What do you value</h1>
 
-    <!-- <ul id="valued-icons">
-        <li id="time-management"><a href="about.php">Time Management:</a></li>
-        <li id="customer-satisfaction"><a href="testimony.php">Customer Satisfaction:</a></li>
-        <li id="communication"><a href="contact.php">Great Communication:</a></li>
-        <li id="portfolio-sample"><a href="portfolio.php">Quality Material:</a></li>
-    </ul> -->
 <div class="sm:inline-flex md:block lg:flex xl:flex">
-  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="about">Time Management:</a> </div>
-  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="testimony">Customer Satisfaction:</a> </div>
-  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="contact">Relationships:</a> </div>
-  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline" href="portfolio">Quality Material:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline time-management" href="about">Time Management:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline customer-satisfaction" href="testimony">Customer Satisfaction:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline communication" href="contact">Relationships:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline portfolio-icon" href="portfolio">Quality Material:</a> </div>
 </div>
 
     <!-- <article id="introduction">
@@ -46,10 +40,10 @@
     <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">
     <div class="mb-8">
       <div class="text-black font-bold text-xl mb-2">Working for you. Here for you. </div>
-      <p class="text-grey-darker text-base">As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
+      <p class="antipasto text-grey-darker text-base">As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
             integrity and respect for you and your brand while communicating to the prospective audience with creative
             material!</p>
-        <p><a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Samples</a></span></p>
+        <p class="text-grey-darker"><a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Samples</a></span></p>
     </div>
     
   </div>

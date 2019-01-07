@@ -91,7 +91,7 @@ function getClients()
     // Use returned data (if any)
     while ($row = mysqli_fetch_assoc($result_set))
     {
-        echo "<div class=\"portfolio-work-wrapper\">";
+        echo "<div class=\"sm:w-1 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 portfolio-work-wrapper\">";
         echo "<a href=\"case-study.php?page=".$row['id']."\"> <img class=\"website-comps\" src=\"images/".$row['portfolio-thumbnail']."\" alt=\"".$row['portfolio-thumbnail-alt-description'].""."\"> </a>";
         echo "<h4 data-type=".$row['project_type']."><a href=\"case-study.php?page=".$row['id']."\"> " .$row['name']."</a></h4>";
         echo "<p data-type=\"showAll\"> ".$row['portfolio-thumbnail-alt-description']."</p>";
