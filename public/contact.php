@@ -4,41 +4,35 @@ $title = "Contact ";
 include(SHARED_PATH .'/header.php');
 ?>
 
-    <main id="content-area">
-    
-
-
+<main class="xl:p-16">
+  
       <h1 class ="contact-question-header">Do you value</h1>
       <h2 class ="question"> Excellent Communication Skills?</h2>
 
-      <div id="content-body-wrapper">
-        <div id="large-phone-icon">
-          <a href="tel:3035782725">Call Me Today:</a>
-        </div>
-        <div id="email-icon" rel="js-email-form">
-          <a href="#modal" rel="js-email-form">Email me today:</a> <a class="mobile" href="mailto:iid3mario@gmail.com">Email me today:</a>
-        </div>
-        <div id="facebook-icon">
-          <a href="https://www.linkedin.com/pub/demario-windom/21/390/855" target="_blank">Linked In:</a>
-        </div>
-        <div id="instagram-icon">
-          <a href="https://github.com/d3mario" target="_blank">Git Hub :</a>
-        </div>
-        <img src="images/divider.png" alt="divider" />
-        <div class="details"><a href="tel:3035782725">303-578-2725</a></div>
-        <div class="details" rel="js-email-form"><a href="#modal" rel="js-email-form">info [at] d3mario [dot] com</a></div>
-        <div class="details"><a href="https://www.linkedin.com/pub/demario-windom/21/390/855" target="_blank">DeMario Windom</a></div>
-        <div class="details"><a href="https://github.com/d3mario" target="_blank">DeMario Windom</a></div>
+      <div class="sm:inline-flex md:block lg:flex xl:flex">
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline large-phone-icon" href="tel:3035782725">Call Me Today:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline email-icon" href="testimony">Email me today:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline linkedin-icon" href="contact">Linked In:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline gitHub-icon" href="portfolio">Git Hub:</a> </div>
+</div>
+<hr class="divider">
+<div class="sm:inline-flex md:block lg:flex xl:flex">
 
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a href="tel:3035782725">303-578-2725</a><</div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a href="#modal" rel="js-email-form">info [at] d3mario [dot] com</a></div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a href="https://www.linkedin.com/pub/demario-windom/21/390/855" target="_blank">DeMario Windom</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a href="https://github.com/d3mario" target="_blank">DeMario Windom</a> </div>
 
-      <article id ="mission">
-        <div id = "left-collumn">
-          <h2 rel="email_sent_status"> Thank You!</h2>
+</div>
 
-          <?php
+     <div class="sm:inline-flex md:block lg:flex xl:flex">
+    <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">
+    <div class="mb-8">
+      <div class="text-black font-bold text-xl mb-2">Thank You! 
+      <?php
           $mailSent = true;
 
-          if (isset($_GET["SUCCESS"]))
+          if ($_SERVER['REQUEST_METHOD'] === 'POST')
           {
             echo "<p> Your message was sent successfully</p>";
           }
@@ -46,50 +40,50 @@ include(SHARED_PATH .'/header.php');
             echo "<p>I look forward to working with you and bringing your vision to life! </p>";
           }
           ?>
-
-
-        </div>
-        <div id = "right-collumn">
-          <p id="view-services"><a href="testimonies.php">View<span class="samples-text">Testimonies</span></a></p>
-          <p id="view-resume"><a href="write-your-testimony.php" >Write<span class="samples-text">Testimony</span></a></p>
-        </div>
-      </article>
       </div>
 
-    </main>
-
-<div id="modal" rel="js-contact-modal">
-  <div class="modal-content ">
-    <div id="lb" rel="js-contact-modal">
-      <p id="services-heading" rel="js-contact-modal-close"> Send me an email: [x] to close</p>
     </div>
-    <form method="POST" action="sendmessage.php" target="_parent" id="emailForm" >
-    <table id="contact-email-form">
-      <tr>
-        <td class="contact-email-form-label">First Name </td>
-        <td><input type="text" name="firstName" rel="vistorFirstName" id="firstName" value="" maxlength="60" size="60"></td>
-      </tr>
-      <tr>
-        <td class="contact-email-form-label">Subject </td>
-        <td><input type="text"  rel="emailSubject" name="emailSubject" id="emailSubject" value="" maxlength="60" size="60"></td>
-      </tr>
-      <tr>
-        <td class="contact-email-form-label">Email Address </td>
-        <td><input type="text"  rel="vistorEmailAddress" name="email" id="email" value="" maxlength="60" size="60"></td>
-      </tr>
-      <tr>
-        <td class="contact-email-form-label">Message </td>
-        <td><textarea name="emailmsg" rel="vistorEmailMessage" id="emailMessage" class="contact-email-form-label" form="emailForm" > </textarea></td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td><button name="submit" id="submit" rel="submitEmailButton">Submit </button>
-        </td>
-      </tr>
-    </table>
-    </form>
-    <div id="lb-footer"></div>
+    
   </div>
+
+<?php 
+  if($_SERVER['REQUEST_METHOD'] != 'POST')
+  {
+    ?>
+    <form class="w-full max-w-md" method="post" action="contact.php?SUCCESS">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+        First Name
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+      <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+        Email: 
+      </label>
+      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" type="email" >
+      <p class="text-red text-xs italic">Please fill out this field.</p>
+    </div>
+  </div>
+  <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+        Email Message: 
+      </label>
+      <textarea class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="emailMessage"></textarea>
+      <p class="text-red text-xs italic">Please fill out this field.</p>
+      <div class="md:w-2/3">
+      <input type="submit" class="shadow bg-purple hover:bg-purple-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" value"Submit">
+        
+    </div>
+  </div>
+<?php
+  }
+  ?>
+</div>
+</main>
+
 
 </div>
 <?php

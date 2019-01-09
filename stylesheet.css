@@ -28541,6 +28541,33 @@ p {
     background: url("public/images/value-icons.png") repeat scroll -630px 640px transparent;/*margin: 0 auto;*/
   }
   
+.large-phone-icon {
+  display: block;
+  height: 200px;
+  width:195px;
+  background: url("public/images/sprite-icons.png") repeat scroll -10px 550px transparent;/*margin: 0 auto;*/
+}
+
+.email-icon {
+  display: block;
+  height: 200px;
+  width:195px;
+  background: url("public/images/sprite-icons.png") repeat scroll -149px 550px transparent;/*margin: 0 auto;*/
+}
+.gitHub-icon {
+  display: block;
+  height: 200px;
+  width:195px;
+  background: url("public/images/sprite-icons.png") repeat scroll -561px 550px transparent;/*margin: 0 auto;*/
+}
+
+.linkedin-icon {
+  display: block;
+  height: 200px;
+  width:195px;
+  background: url("public/images/sprite-icons.png") repeat scroll -421px 550px transparent;/*margin: 0 auto;*/
+}
+
   .portfolio-icon{
     display: block;
     height: 200px;
@@ -28559,6 +28586,11 @@ p {
 		-ms-transform:scale(1.05, 1.05); /* IE 9 */
 		-webkit-transform:scale(1.05, 1.05); /* Chrome, Safari, Opera */
 		transform:scale(1.05, 1.05); /* Standard syntax */
+  }
+
+  .divider {
+    background: url("public/images/divider.png");
+    height: 20px;
   }
   
 

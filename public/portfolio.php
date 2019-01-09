@@ -15,7 +15,7 @@ include(SHARED_PATH .'/header.php');
 
                     <tr>
                         <td>
-                                <input type="checkbox" id="allCheckBoxes" checked="checked">
+                                <input class="mr-2 leading-tight" type="checkbox" id="allCheckBoxes" checked="checked">
                         </td>
                         <td>
                             <label for="allCheckBoxes">
@@ -25,7 +25,7 @@ include(SHARED_PATH .'/header.php');
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" id="developmentCheckBox" checked="checked" />
+                            <input class="mr-2 leading-tight"  type="checkbox" id="developmentCheckBox" checked="checked" />
                         </td>
                         <td>
                             <label for="developmentCheckBox">
@@ -35,7 +35,7 @@ include(SHARED_PATH .'/header.php');
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" id="uxDesignCheckBox" checked="checked" />
+                            <input class="mr-2 leading-tight" type="checkbox" id="uxDesignCheckBox" checked="checked" />
                         </td>
                         <td>
                             <label for="uxDesignCheckBox">
@@ -45,7 +45,7 @@ include(SHARED_PATH .'/header.php');
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" id="printDesignCheckBox" checked="checked">
+                            <input class="mr-2 leading-tight" type="checkbox" id="printDesignCheckBox" checked="checked">
                         </td>
                         <td>
                             <label for="printDesignCheckBox">
