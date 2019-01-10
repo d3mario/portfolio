@@ -28525,20 +28525,24 @@ p {
     display: block;
     height: 200px;
     width:195px;
-    background: url("public/images/value-icons.png") repeat scroll 0px 640px transparent;/*margin: 0 auto;*/
+    background: url("public/images/sprite-icons.png") repeat scroll -10px 350px transparent;/*margin: 0 auto;*/
   }
   
   .customer-satisfaction {
     display: block;
     height: 200px;
     width:195px;
-    background: url("public/images/value-icons.png") repeat scroll -320px 640px transparent;/*margin: 0 auto;*/
+    background: url("public/images/sprite-icons.png") repeat scroll -190px 350px transparent;/*margin: 0 auto;*/
   }
   .communication{
     display: block;
     height: 200px;
     width:195px;
-    background: url("public/images/value-icons.png") repeat scroll -630px 640px transparent;/*margin: 0 auto;*/
+    background: url("public/images/sprite-icons.png") repeat scroll -350px 350px transparent;/*margin: 0 auto;*/
+  }
+
+  .small-communication{
+    background: url("public/images/sprite-icons.png") repeat scroll -350px 350px transparent;
   }
   
 .large-phone-icon {
@@ -28552,27 +28556,27 @@ p {
   display: block;
   height: 200px;
   width:195px;
-  background: url("public/images/sprite-icons.png") repeat scroll -149px 550px transparent;/*margin: 0 auto;*/
+  background: url("public/images/sprite-icons.png") repeat scroll -190px 550px transparent;/*margin: 0 auto;*/
 }
 .gitHub-icon {
   display: block;
   height: 200px;
   width:195px;
-  background: url("public/images/sprite-icons.png") repeat scroll -561px 550px transparent;/*margin: 0 auto;*/
+  background: url("public/images/sprite-icons.png") repeat scroll -540px 550px transparent;/*margin: 0 auto;*/
 }
 
 .linkedin-icon {
   display: block;
   height: 200px;
   width:195px;
-  background: url("public/images/sprite-icons.png") repeat scroll -421px 550px transparent;/*margin: 0 auto;*/
+  background: url("public/images/sprite-icons.png") repeat scroll -350px 550px transparent;/*margin: 0 auto;*/
 }
 
   .portfolio-icon{
     display: block;
     height: 200px;
     width:195px;
-    background: url("public/images/value-icons.png") repeat scroll 180px 640px transparent;/*margin: 0 auto;*/
+    background: url("public/images/sprite-icons.png") repeat scroll -540px 350px transparent;/*margin: 0 auto;*/
   }
 
   .website-comps {

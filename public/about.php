@@ -25,9 +25,15 @@ $clientInfo = array(
     "clientCaseStudyBrief" =>$clientCaseStudyBrief,
 );
 ?>
-    <div id="content-area">
-        <h1 class="portfolio-question-header"> Do you agree</h1>
+<main class="xl:p-16">
+    <div class="flex items-center">
+  <img class="w-10 h-10 rounded-full mr-4" src="https://media.licdn.com/dms/image/C4E03AQHoXIvE6-0RLQ/profile-displayphoto-shrink_200_200/0?e=1552521600&v=beta&t=pCtPYG32GusJ4M4hO-knqpVtrGDeIju_2biO1KPyxM0" alt="Avatar of DeMario Windom">
+      <div class="text-sm">
+      <h1 class="portfolio-question-header"> Do you agree</h1>
         <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
+      </div>
+    </div>
+
         <article id="media-display">
             <div class="content" rel="js-content">
                 <?php
@@ -102,7 +108,7 @@ $clientInfo = array(
             </table>
             <div id="lb-footer"> </div>
         </div>
-    </div>
+        </main>
 <?php
 include(SHARED_PATH .'/footer.php');
 ?>

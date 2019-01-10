@@ -30,13 +30,18 @@ if ( 0 < $page && $page != '' )
     include 'includes/header.php';
     include 'includes/main-slider-show.php';
     ?>
-    <div id="content-area">
+<main class="xl:p-16">
 
     <?php
     if ( 0 < $page && $page != '' )
     {?>
-        <h1 class ="portfolio-question-header"> Do you agree</h1>
+<div class="flex items-center">
+      <img class="w-10 h-10 rounded-full mr-4" src="../public/images/sprite-icons.png" alt="Avatar of Jonathan Reinink">
+      <div class="text-sm">
+      <h1 class ="portfolio-question-header"> Do you agree</h1>
         <h2 class ="case-study-question">Quality Material Should Represent Your Brand?</h2>
+      </div>
+    </div>
         <?php
 
         echo "<article id=\"media-display\">";
@@ -166,10 +171,10 @@ else
     include 'includes/header.php';
     include 'includes/main-slider-show.php';
     ?>
-    <div id="content-area">
+<main class="xl:p-16">
         <h1 class ="portfolio-question-header"> Oops!</h1>
         <h2 class ="case-study-question">An error occured....</h2>
-    </div>
+</main>
     <?php
 }
 include 'includes/footer.php'; ?>

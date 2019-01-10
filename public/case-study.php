@@ -24,10 +24,28 @@ $clientInfo = array(
     "clientCaseStudyBrief" =>$clientCaseStudyBrief,
 );
 ?>
-<div id="content-area">
+<main class="xl:p-16">
     <h1 class="portfolio-question-header"> Do you agree</h1>
     <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
-    <article id="media-display">
+
+    <div class="sm:inline-flex md:block lg:flex xl:flex">
+  <div class="text-grey-darker text-left px-4 py-2 m-2"> 
+      
+        <h3><?php echo($clientInfo["clientName"]); ?></h3>
+        <p><?php echo ($clientInfo["clientCaseStudyBrief"]);?></p>
+        <p class="case"><?php echo ($clientInfo["clientCaseStudy"]);?></p>
+        <h5 class="methods">Methods</h5>
+        <ul class="methods-list">
+            <?php
+            foreach ($clientMethods as $clientMethodInfo){
+                echo('<li>'.$clientMethodInfo.'</li>');
+            }?>
+
+        </ul>
+        <p id="button">View More</p>
+  </div>
+  <div class="text-grey-darker px-4 py-2 m-2"> 
+  <article id="media-display">
         <div class="content" rel="js-content">
             <?php
             //dowhileloop
@@ -55,20 +73,10 @@ $clientInfo = array(
             <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
         </p>
     </article>
-    <article id="inside">
-        <h3><?php echo($clientInfo["clientName"]); ?></h3>
-        <p><?php echo ($clientInfo["clientCaseStudyBrief"]);?></p>
-        <p class="case"><?php echo ($clientInfo["clientCaseStudy"]);?></p>
-        <h5 class="methods">Methods</h5>
-        <ul class="methods-list">
-            <?php
-            foreach ($clientMethods as $clientMethodInfo){
-                echo('<li>'.$clientMethodInfo.'</li>');
-            }?>
+  </div>
+</div>
 
-        </ul>
-        <p id="button">View More</p>
-    </article>
+
 
 </div>
     <div id="modal" rel="js-modal">
@@ -102,7 +110,7 @@ $clientInfo = array(
             </table>
             <div id="lb-footer"> </div>
         </div>
-    </div>
+</main>
 <?php
 include(SHARED_PATH .'/footer.php');
 ?>

@@ -5,9 +5,13 @@ include(SHARED_PATH .'/header.php');
 ?>
 
 <main class="xl:p-16">
-  
+<div class="flex items-center">
+  <img class="w-10 h-10 rounded-full mr-4" src="../public/images/sprite-icons.png" alt="Avatar of Jonathan Reinink">
+      <div class="text-sm">
       <h1 class ="contact-question-header">Do you value</h1>
       <h2 class ="question"> Excellent Communication Skills?</h2>
+      </div>
+    </div>
 
       <div class="sm:inline-flex md:block lg:flex xl:flex">
   <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline large-phone-icon" href="tel:3035782725">Call Me Today:</a> </div>

@@ -4,9 +4,14 @@ $title = "Portfolio ";
 include(SHARED_PATH .'/header.php');
 ?>
 <main class="xl:p-16">
+<div class="flex items-center">
+      <img class="w-10 h-10 rounded-full mr-4" src="../public/images/sprite-icons.png" alt="Avatar of Jonathan Reinink">
+      <div class="text-sm">
+      <h1 class ="portfolio-question-header"> Do you agree</h1>
+      <h2 class ="question">Quality Material Should Represent Your Brand?</h2>
+      </div>
+    </div>
 
-        <h1 class ="portfolio-question-header"> Do you agree</h1>
-        <h2 class ="question">Quality Material Should Represent Your Brand?</h2>
         <div id="category-tabs">
 
             <form id="portfolio-pages">
