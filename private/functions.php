@@ -5,7 +5,7 @@ function getNavigation()
     global $connection;
     // Perform database query
     $query = "SELECT * FROM pages";
-    $result_set = mysqli_query($connection, $query);
+    $result_set = pg_query($connection, $query);
 
     // Test if query succeeded
     if (!$result_set) {
@@ -13,10 +13,10 @@ function getNavigation()
     }
 
     // Use returned data (if any)
-    while ($navigation = mysqli_fetch_assoc($result_set)) {
+    while ($navigation = pg_fetch_assoc($result_set)) {
         echo $navigation["name"] . "<br />";
     }
-    mysqli_free_result($result_set);
+    pg_free_result($result_set);
 
 }
 
@@ -61,7 +61,7 @@ function getPage($id)
     $query = 'SELECT * FROM projects ';
     $query .= 'WHERE id='.$id.'';
     //echo $query;
-    $result_set = mysqli_query($connection, $query);
+    $result_set = pg_query($connection, $query);
 
     // Test if query succeeded
     if (!$result_set) {
@@ -69,9 +69,9 @@ function getPage($id)
     }
 
     // Use returned data (if any)
-    $page = mysqli_fetch_assoc($result_set);
+    $page = pg_fetch_assoc($result_set);
     return $page;
-    mysqli_free_result($result_set);
+    pg_free_result($result_set);
 
 }
 
@@ -80,16 +80,13 @@ function getClients()
     global $connection;
     $query = 'SELECT * FROM projects WHERE ';
     $query .= 'id !=112 ORDER BY project_type ASC';
-
-    $result_set = mysqli_query($connection, $query);
-
+    $result_set = pg_query($connection, $query);
     // Test if query succeeded
     if (!$result_set) {
-        exit("Database query failed.");
+        var_dump(pg_last_error($connection));
     }
-
     // Use returned data (if any)
-    while ($row = mysqli_fetch_assoc($result_set))
+    while ($row = pg_fetch_assoc($result_set))
     {
         echo "<div class=\"sm:w-1 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 portfolio-work-wrapper\">";
         echo "<a href=\"case-study.php?page=".$row['id']."\"> <img class=\"website-comps\" src=\"images/".$row['portfolio-thumbnail']."\" alt=\"".$row['portfolio-thumbnail-alt-description'].""."\"> </a>";
@@ -97,14 +94,8 @@ function getClients()
         echo "<p data-type=\"showAll\"> ".$row['portfolio-thumbnail-alt-description']."</p>";
         echo "</div>";
     }
-
     // release data
-    mysqli_free_result($result_set);
-
+    pg_free_result($result_set);
 }
-
-
-
-
 
 ?>
