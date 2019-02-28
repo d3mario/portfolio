@@ -7,16 +7,22 @@ define("SHARED_PATH", PRIVATE_PATH . '/shared');
 include_once ('db_credentials.php');
 require_once ('functions.php');
 require_once ('client.php');
+$host = DB_SERVER;
+$port = DB_PORT;
+$db = DB_NAME;
+$username = DB_USER;
+$password = DB_PASS;
 
-
+try{
 //  Create a database connection
-$connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+    $dsn = "pgsql:host=$host;port=$port;dbname=$db;user=$username;password=$password";
+    $connection = new PDO($dsn);
 
-if(mysqli_connect_errno()) {
-    $msg = "Database connection failed: ";
-    $msg .= mysqli_connect_error();
-    $msg .= " (" . mysqli_connect_errno() . ")";
-    exit($msg);
+    if($connection) {
+       echo "Connected to the $db database successfully";
+    }
+}catch (PDOException $e){
+    echo $e->getMessage();
 }
 
 ?>

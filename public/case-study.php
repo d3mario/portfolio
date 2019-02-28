@@ -4,6 +4,7 @@ $title = "Portfolio ";
 include(SHARED_PATH .'/header.php');
 
 
+
 $page = isset($_GET['page']) ? $_GET['page'] : '';
 $error = isset($_GET['error']);
 $view ='';
