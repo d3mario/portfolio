@@ -39,5 +39,6 @@ src/Email.php
 id_rsa
 
 /vendor/
+./beta
 
 node_modules/

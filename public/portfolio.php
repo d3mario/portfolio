@@ -60,15 +60,6 @@ include(SHARED_PATH .'/header.php');
                     </tr>
                 </table>
 
-<!--                <span class="category" > Show Categories</span>
-               <input type="checkbox" id="allCheckBoxes" checked="checked" />
-                <label class="category" for="allCheckBoxes">View All </label>
-                <input type="checkbox" id="developmentCheckBox" checked="checked" />
-                <label class="category" for="developmentCheckBox">Development </label>
-                <input type="checkbox" id="uxDesignCheckBox" checked="checked"/>
-                <label class="category" for="uxDesignCheckBox">UX Design</label>
-                <input type="checkbox" id="printDesignCheckBox" checked="checked"/>
-                <label class="category" for="printDesignCheckBox">Print</label>-->
             </form>
       	</div>
 

@@ -1,4 +1,5 @@
 <?php
+include '../private/initalize.php';
 
 class Client{
     private $clientID;

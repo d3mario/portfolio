@@ -9,21 +9,24 @@ $page = isset($_GET['page']) ? $_GET['page'] : '';
 $error = isset($_GET['error']);
 $view ='';
 
-$client = new Client($page);
-$clientName = $client->getClientName();
-$clientCaseStudy = $client->getClientCaseStudy();
-$clientCaseStudyBrief = $client->getClientCaseStudyBrief();
-$clientMethods = array();
-$clientMethods = $client->getClientsMethods();
-$clientSmallCompositions = $client->getSmallClientCompositionViews();
-$clientLargeCompositions = $client->getLargeClientCompositionViews();
-
+$page = getPage($_GET['page']);
+//var_dump($page);
+$id = $page['id'];
+//$client = new Client($id);
+//var_dump($client);
+//$clientName = $client->getClientName();
+//$clientCaseStudy = $client->getClientCaseStudy();
+//$clientCaseStudyBrief = $client->getClientCaseStudyBrief();
+//$clientMethods = array();
+//$clientMethods = $client->getClientsMethods();
+//$clientSmallCompositions = $client->getSmallClientCompositionViews();
+//$clientLargeCompositions = $client->getLargeClientCompositionViews();
 
 $clientInfo = array(
-    "clientName" => $clientName,
-    "clientCaseStudy" => $clientCaseStudy,
-    "clientCaseStudyBrief" =>$clientCaseStudyBrief,
+    "clientName" => $page['name'],
+    "clientCaseStudy" => $page['casestudy']
 );
+//var_dump($clientInfo);
 ?>
 <main class="xl:p-16">
     <h1 class="portfolio-question-header"> Do you agree</h1>
@@ -31,7 +34,7 @@ $clientInfo = array(
 
     <div class="sm:inline-flex md:block lg:flex xl:flex">
   <div class="text-grey-darker text-left px-4 py-2 m-2"> 
-      
+
         <h3><?php echo($clientInfo["clientName"]); ?></h3>
         <p><?php echo ($clientInfo["clientCaseStudyBrief"]);?></p>
         <p class="case"><?php echo ($clientInfo["clientCaseStudy"]);?></p>

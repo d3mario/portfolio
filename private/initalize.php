@@ -17,9 +17,9 @@ try{
 //  Create a database connection
     $dsn = "pgsql:host=$host;port=$port;dbname=$db;user=$username;password=$password";
     $connection = new PDO($dsn);
-
     if($connection) {
-       echo "Connected to the $db database successfully";
+       //echo "Connected to the $db database successfully";
+       return;
     }
 }catch (PDOException $e){
     echo $e->getMessage();
