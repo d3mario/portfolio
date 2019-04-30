@@ -35,16 +35,16 @@ if(!isset($title))
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
-      <a href="index" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
+      <a href="index.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         home
       </a>
-      <a href="about" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
+      <a href="about.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         about
       </a>
-      <a href="portfolio" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="portfolio.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         portfolio
       </a>
-      <a href="contact" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="contact.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         contact
       </a>
     </div>

@@ -58,9 +58,8 @@ function getNavigation()
 function getPage($id)
 {
     global $connection;
-    $query = 'SELECT * FROM projects ';
+    $query = 'SELECT * FROM projects';
     $query .= ' INNER JOIN clients ON projects.id = '.$id.'';
-//    var_dump($query);
     $result_set = $connection->query($query);
     // Test if query succeeded
     if (!$result_set) {
@@ -69,6 +68,7 @@ function getPage($id)
 
     // Use returned data (if any)
     $page = $result_set->fetch();
+//    var_dump($page);
     return $page;
     pg_free_result($result_set);
 

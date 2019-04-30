@@ -9,8 +9,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : '';
 $error = isset($_GET['error']);
 $view ='';
 
-$page = getPage($_GET['page']);
-//var_dump($page);
+$client = getPage($page);
+$image = JSON_decode($client['images'], true);
+var_dump($image[0]);
 $id = $page['id'];
 //$client = new Client($id);
 //var_dump($client);
@@ -23,8 +24,8 @@ $id = $page['id'];
 //$clientLargeCompositions = $client->getLargeClientCompositionViews();
 
 $clientInfo = array(
-    "clientName" => $page['name'],
-    "clientCaseStudy" => $page['casestudy']
+    "clientName" => $client['name'],
+    "clientCaseStudy" => $client['casestudy']
 );
 //var_dump($clientInfo);
 ?>
@@ -54,11 +55,12 @@ $clientInfo = array(
             <?php
             //dowhileloop
             $count = 1;
-            foreach($clientSmallCompositions as $comp)
+            foreach($image as $comp)
             {
+                $c = $comp["image01"];
                 echo (
                 "<div class=\"item sample$count\">
-                <a href=\"#\" rel=\"viewLargeDisplay0".$count."\"><img class=\"slide\" src=images/$comp alt=\" \"></a>
+                <a href=\"#\" rel=\"viewLargeDisplay0".$count."\"><img class=\"slide\" src=images/\ $c alt=\" \"></a>
             </div>");
                 $count++;
             }
