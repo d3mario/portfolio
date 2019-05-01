@@ -88,9 +88,9 @@ function getClients()
     while ($row = $result_set->fetch())
     {
 
-        $image = JSON_decode($row['images'], true);
+        $image = JSON_decode($row['images'], true)[0]["cardImage"];
         echo "<div class=\"sm:w-1 md:w-1/3 lg:w-1/4 xl:w-1/3 mb-4 portfolio-work-wrapper\">";
-        echo "<a href=\"case-study.php?page=".$row['id']."\"> <img class=\"website-comps\" src=\"images/".$image['cardImage']."\" alt=\"".$row['portfolio-thumbnail-alt-description'].""."\"> </a>";
+        echo "<a href=\"case-study.php?page=".$row['id']."\"> <img class=\"website-comps\" src=\"images/".$image."\" alt=\"".$row['portfolio-thumbnail-alt-description'].""."\"> </a>";
         echo "<h4 data-type=".$row['project_type']."><a href=\"case-study.php?page=".$row['id']."\"> " .$row['name']."</a></h4>";
         echo "<p data-type=\"showAll\"> ".$row['portfolio-thumbnail-alt-description']."</p>";
         echo "</div>";

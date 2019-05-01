@@ -10,8 +10,8 @@ $error = isset($_GET['error']);
 $view ='';
 
 $client = getPage($page);
-$image = JSON_decode($client['images'], true);
-var_dump($image[0]);
+$image = JSON_decode($client['images'], true)[0]["images"];
+//var_dump($image);
 $id = $page['id'];
 //$client = new Client($id);
 //var_dump($client);
@@ -27,7 +27,7 @@ $clientInfo = array(
     "clientName" => $client['name'],
     "clientCaseStudy" => $client['casestudy']
 );
-//var_dump($clientInfo);
+
 ?>
 <main class="xl:p-16">
     <h1 class="portfolio-question-header"> Do you agree</h1>
@@ -53,17 +53,18 @@ $clientInfo = array(
   <article id="media-display">
         <div class="content" rel="js-content">
             <?php
-            //dowhileloop
+
             $count = 1;
-            foreach($image as $comp)
+
+            $keys = array_keys($image);
+            for($i=0; $i<count($image); $i++)
             {
-                $c = $comp["image01"];
-                echo (
-                "<div class=\"item sample$count\">
-                <a href=\"#\" rel=\"viewLargeDisplay0".$count."\"><img class=\"slide\" src=images/\ $c alt=\" \"></a>
-            </div>");
+                $comp = $image[$keys[$i]];
+                echo ("<div class=\"item sample$count\">");
+                echo("<a href=\"#\" rel=\"viewLargeDisplay0$count\"><img class=\"slide\" src=$comp alt=\" \"></a></div>");
                 $count++;
             }
+
             ?>
         </div>
         <?php
