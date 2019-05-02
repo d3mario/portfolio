@@ -1,0 +1,56 @@
+/* IMAGE ELEMENTS
+---------------------------------------------------- */
+.smallSlide {
+    float: left;
+    width: 494px;
+    height: 302px;
+}
+.fadeOut {
+    float: left;
+    width: 494px;
+    height: 302px;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.size {
+    width: 494px !important;
+    height: 302px !important;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+#main-logo {
+    float: left;
+    width: 218px;
+
+    /* margin: auto; */
+}
+.website-comps {
+    box-shadow: 0px 8px 10px #888888;
+    -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* For Safari 3.1 to 6.0 */
+    transition:width .5s, height .5s, transform .5s;/*-ms-transform:scale(1.25, 1.25);*/ /* IE 9 */
+}
+.website-comps:hover {
+    -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* For Safari 3.1 to 6.0 */
+    transition:width .5s, height .5s, transform .5s;
+    -ms-transform:scale(1.05, 1.05); /* IE 9 */
+    -webkit-transform:scale(1.05, 1.05); /* Chrome, Safari, Opera */
+    transform:scale(1.05, 1.05); /* Standard syntax */
+}
+
+#divider {
+    clear: both;
+    display: block;
+    height: 18px;
+    /*width: 1040px;*/
+    padding: 35px 0px 30px 10px;
+}
+#services-logo	{
+    float: left;
+    width: 245px;
+    height: 70px;
+    padding: 0px 0px 0px 20px;
+}

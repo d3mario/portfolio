@@ -1,0 +1,282 @@
+/* BODY AND CONTAINER
+	---------------------------------------------------- */
+/*#media-display {*/
+    /*position: relative;*/
+    /*font-size: 1.5em;*/
+    /*!* width: 500px; *!*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+    /*overflow: visible;*/
+/*}*/
+/*#media-display, #prevButton, #nextButton  {*/
+    /*display: block;*/
+/*}*/
+
+#modal, #lb, #modal-resume, #servicesDisplay{
+    display:none;
+}
+
+#display-controls {
+    text-align: right;
+    font-size: 1.3em;
+    /* width: 480px; */
+    padding: 4em 0em 0em 0em;
+}
+
+
+.content {
+    position: relative;
+    height: 300px;
+}
+/*.content > .item {*/
+    /*background-color: #00aa00;*/
+    /*!*height: 300px;*!*/
+    /*!*width: 494px;*!*/
+    /*display: inline-block;*/
+/*}*/
+.sample1,.sample2,.sample3 {
+    position: absolute;
+}
+.sample1 {
+    /*position: relative;*/
+    /*width: 494px;*/
+    /*background-image: url("../images/mobile-mod-center/images/mobile-mod-center-display-01.png");*/
+    repeat: no-repeat;
+    top: 0px;
+    /*right: 20px;*/
+    z-index: 9999;
+}
+
+.sample2 {
+    /*width: 494px;*/
+    background-image: url("../images/everything-hair-and-nails/images/everything-hair-and-nails-display-02.png");
+    repeat: no-repeat;
+    /*position: absolute;*/
+    /*top: -310px;*/
+    left: 0px;
+    z-index: 8888;
+}
+
+.sample2 {
+    /*width: 494px;*/
+    background-image: url("../images/everything-hair-and-nails/images/everything-hair-and-nails-display-02.png");
+    repeat: no-repeat;
+    /*position: absolute;*/
+    /*top: -310px;*/
+    left: 0px;
+    z-index: 777;
+}
+
+#one {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+    animation: myfirst 5s;
+    z-index: 1000000000000;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    100%  {background:yellow; left:200px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0%   {background:red; left:0px; top:0px;}
+    25%  {background:yellow; left:200px; top:0px;}
+    50%  {background:blue; left:200px; top:200px;}
+    75%  {background:green; left:0px; top:200px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+body {
+    font-size: 76%;
+    /*border-top: 10px solid #424d55;*/
+    background: #424d55;
+    padding: 0em;
+    margin: 0em;
+}
+#container {
+
+    /*overflow: hidden;
+min-width: 1375px 100%;
+max-width: 1920px;*/
+
+    background-color: #fff;
+    padding: 2em;
+    margin: 0em;
+    /*margin: 0 auto;*/
+    /*width: 100%;*/
+    /*z-index: 10;*/
+}
+
+#tabs-1, #tabs-2, #tabs-3 {
+    padding: 75px 0px 0px 100px
+}
+#portfolio-body-wrapper{
+    padding: 0em 0em 0em 5em;
+    width: 100%;
+    min-height: 1000px;
+    height: 1200px;
+}
+.portfolio-work-wrapper {
+    font-family: Antipasto;
+    color: #666;
+    font-weight: 400;
+    /*float: left;*/
+    display: block;
+    width: 335px;
+    /*height: 400px;*/
+    /*background-color: #ccc;
+    box-shadow: 10px 10px 5px #888888;*/
+    margin: 0 auto;
+}
+
+portfolio {
+    /*float: left;*/
+    clear: both;
+    width: 85%/*1300px*/ /*97%*/;
+    /*min-height: 900px;*/
+    background-color: #fff;
+    /*	border-bottom: solid #f2f6f7 70px;
+padding: 30px 0px 0px 168px /*30px 0px 0px 3%*/;
+    margin: 0 auto;
+    border: none;
+}
+
+#category-tabs  {
+    display: none;
+    width: 100%;
+}
+#tabs-1, #tabs-2, #tabs-3 {
+    padding: 75px 0px 0px 100px
+}
+
+@media screen and (min-width:320px)
+{
+    #modal{
+        display:none;
+    }
+
+}
+
+@media screen and (min-width: 700px )
+{
+    #category-tabs  {
+        display: block;
+    }
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #media-display {
+        float: right;
+        font-size: 1.5em;
+        /*width: 500px;*/
+        width: 41%;
+        height: 470px;
+        overflow: hidden;
+        /*padding: 0em 0em 0em 15em;*/
+    }
+    .portfolio-work-wrapper {
+        font-family: Antipasto;
+        color: #666;
+        font-weight: 400;
+        float: left;
+        width: 335px;
+        height: 400px;
+        /*background-color: #ccc;
+		box-shadow: 10px 10px 5px #888888;*/
+        padding: 0em 0em 0em 2em;
+    }
+
+    #content-body-wrapper{
+        clear: both;
+        /*background-color: black;*/
+        padding: 1.5em 0em 0em 8em;
+        margin: 0 auto;
+        width: /*75%*/ 92%;
+        max-width: 1323px;
+    }
+}
+
+.center {
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+@media screen and (min-width:300px ) and (max-width: 699px) {
+    .fader1 {
+        width: 100%;
+        height: 383px;
+        background-image: url("../images/skyline-01.jpeg");
+        /*background-color: aliceblue;*/
+        background-position: top 30px;
+        repeat: no-repeat;
+        top: 0px;
+        z-index: 9999;
+    }
+
+    .fader2 {
+        width: 100%;
+        height: 383px;
+        background-image: url("../images/code-slide.jpg");
+        /*background-color: aliceblue;*/
+        background-position: top 30px;
+        repeat: no-repeat;
+        top: 0px;
+        z-index: 9999;
+    }
+
+    .content {
+        position: relative;
+        height: 200px;
+            overflow: hidden;
+    }
+    #portfolio-body-wrapper{
+        width: 100%;
+        padding: 0em;
+        height: auto;
+    }
+
+    #inside {
+        padding: 0em 0em 2em 0em;
+    }
+
+
+
+    /*.content > .item {*/
+        /*!*background-color: #00aa00;*!*/
+        /*!*height: 300px;*!*/
+        /*!*width: 494px;*!*/
+        /*display: inline-block;*/
+    /*}*/
+
+    /*.sample1, .sample2 {*/
+        /*position: absolute;*/
+    /*}*/
+
+    .sample1 {
+        position: relative;
+        /*width: 494px;*/
+        /*background-image: url("../images/mobile-mod-center/images/mobile-mod-center-display-01.png");*/
+        repeat: no-repeat;
+        top: 0px;
+        /*right: 20px;*/
+        z-index: 9999;
+    }
+
+    .sample2 {
+        /*width: 494px;*/
+        background-image: url("../images/everything-hair-and-nails/images/everything-hair-and-nails-display-02.png");
+        repeat: no-repeat;
+        top: 0px;
+        left: 0px;
+        z-index: 8888;
+    }
+}

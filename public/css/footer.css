@@ -1,0 +1,38 @@
+/* FOOTER AREA
+	---------------------------------------------------- */
+/*footer {*/
+    /*font-family: Antipasto;*/
+    /*font-size: 1.5em;*/
+    /*color: #fff;*/
+    /*font-weight: 400;*/
+    /*text-align: right;*/
+    /*height: 55px;*/
+    /*background-image: url(../images/footer-bg.gif);*/
+    /*background-repeat: repeat-x;*/
+    /*background-color: #424d55;*/
+    /*padding: 1em 0em 0em 0em;*/
+    /*border-top: solid #f2f6f7 70px;*/
+    /*margin: -2em;*/
+/*}*/
+footer p	{
+    font-family: "Antipasto", Courier, monospace;
+    font-size: 1.5em;
+    padding: 0em 1.5em 0em 0em;
+}
+
+footer {
+    font-family: Antipasto;
+    color: #fff;
+    /*font-weight: 400;*/
+    text-align: right;
+    /* -webkit-flex-direction: row; */
+    /* flex-direction: row; */
+    height: 80px;
+    background-image: url(../images/footer-bg.gif);
+    background-repeat: repeat-x;
+    background-color: #424d55;
+    padding: 1.5em 0em 0em 1em;
+    margin: 0em -2em -2em -2em;
+    /* position: relative; */
+    /* z-index: 99999999999999999999999999999999999999999999999999999999; */
+}
