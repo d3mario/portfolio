@@ -6,7 +6,9 @@
             "email": "iid3mario@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "symfony/polyfill-mbstring": "^1.11"
+    },
     "require-dev": {
         "phpunit/phpunit": "^7"
     }

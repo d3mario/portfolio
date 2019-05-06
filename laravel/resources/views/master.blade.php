@@ -1,28 +1,15 @@
-<?php
-$title;
-if(!isset($title))
-{
-    $title = 'Web Developer | DeMario Windom ';
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- Style declorations: Bootstrap -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-    <!-- Style declorations: Personal -->
-    <!-- <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css" > -->
-    <link rel="stylesheet" href="../stylesheet.css">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?php echo ($title.'| DeMario Windom'); ?></title>
-</head>
-<body>
-<header>
+        <title>@yield('title', 'DeMario | Portfolio')</title>
+        <!-- Fonts -->
+        <link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+    </head>
+    <body>
+    <header>
     <nav class="flex items-center justify-between flex-wrap bg-header p-6">
   <div class="flex items-center flex-no-shrink text-white mr-6">
     <span class="font-semibold text-xl tracking-tight">deMario</span>
@@ -34,16 +21,16 @@ if(!isset($title))
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
-      <a href="index.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
+      <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         home
       </a>
-      <a href="about.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
+      <a href="about" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         about
       </a>
-      <a href="portfolio.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="showClients" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         portfolio
       </a>
-      <a href="contact.php" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="contact" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         contact
       </a>
     </div>
@@ -62,8 +49,6 @@ if(!isset($title))
         </div> -->
     </header>
 <div class="container mx-auto .w-full">
-
-
     <div id="slide-show">
         <div class="fader1" rel="js-slide-image-01">
             <div class="subtitle-text">
@@ -77,9 +62,33 @@ if(!isset($title))
                 <p>Bringing visions to life!</p>
             </div>
         </div>
-    </div>
+    </div>    
+    <main class="xl:p-16">
+    @yield('headline')
+    @yield('leadingIcons')
+    
 
+    <div class="sm:inline-flex md:block lg:flex xl:flex">
+    <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">
+    @yield('content')
 
+    
+  </div>
+  @yield('displayShowcase')
+    
 
+</div>
 
+</div>
+<footer class="flex items-center justify-between flex-wrap bg-footer p-6">
+    <p class="text-grey-lighter text-right"> version 1.0.0 | <?php echo date("Y"); ?> </p>
+</footer>
+<script src="js/jquery.js"></script>
+<script src = "js/scripts.js" > </script>
+<!--    <script src="js/carousel.js"></script>-->
 
+</main>
+
+</div>
+    </body>
+</html>
