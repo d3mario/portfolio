@@ -28596,6 +28596,10 @@
       background: url("../images/divider.png");
       height: 20px;
     }
+
+    .modal-content{
+      display: none;
+    }
     
   
   }

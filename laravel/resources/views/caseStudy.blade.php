@@ -2,26 +2,32 @@
 @section('title')
 Case Study | Demario
 @endsection
+@section('headline')
+<h1 class="portfolio-question-header"> Do you agree</h1>
+<h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
+@endsection
 @section('content')
-<div class="mb-8">
-      <div class="text-black font-bold text-xl mb-2">Working for you. Here for you. </div>
-      <p class="antipasto text-grey-darker text-base">As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
-            integrity and respect for you and your brand while communicating to the prospective audience with creative
-            material!</p>
-        <p class="text-grey-darker"><a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Samples</a></span></p>
+<!-- <div class="text-grey-darker font-bold text-xl mb-2">Working for you. Here for you. </div> -->
+
+<div class="text-grey-darker text-left px-1 mb-8">
+
+      <h3>{{$client['name']}}  </h3>
+
+        <p class="case">{{$client['body']}}<a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Samples</a></span></p>
     </div>
 @endsection
         @section('displayShowcase')
 
   <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
+         <img src="../{{$client['images']}}" />
           <!-- <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
     </div> -->
-    </div>
-  <p>
-            <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
+    <p>
+            <a class="no-underline text-blue-darkest" rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a><a class="no-underline text-blue-darkest" href="" target="_blank">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">print work</span></a>
         </p>
 
 
+    </div>
 
 </div>
     <div id="modal" rel="js-modal">

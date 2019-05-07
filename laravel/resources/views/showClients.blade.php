@@ -2,6 +2,7 @@
 @section('title')
 Clients | Portfolio 
 @endsection
+
 @section('content')
 <div class="flex flex-wrap mb-4">
       <div class="text-black font-bold text-xl mb-2">Working for you. Here for you. </div>

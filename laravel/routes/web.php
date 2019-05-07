@@ -27,8 +27,17 @@ Route::get('/showClients', function(){
     return view('showClients');
 });
 
-Route::get('/case-study/{id}', function(){
-    return view('caseStudy');
+Route::get('/caseStudy/{id}', function(){
+    $client = [
+        'name' => 'Mobile Mod Center',
+        'web' => 'www.local.com',
+        'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, porro deserunt praesentium consectetur consequuntur sit illum placeat eum. Repudiandae, facilis deserunt! Provident eius voluptate corporis et omnis, dolore laboriosam nostrum.',
+        'images' => 'images/mobile-mod-center/images/mobile-mod-center-display-01.png'
+    ];
+
+    return view('caseStudy', [
+        'client' => $client
+        ]);
 });
 
 Route::get('/caseStudy', function(){
