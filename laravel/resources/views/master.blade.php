@@ -27,7 +27,7 @@
       <a href="about" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         about
       </a>
-      <a href="showClients" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="clients" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         portfolio
       </a>
       <a href="contact" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
@@ -81,7 +81,7 @@
 
 </div>
 <footer class="flex items-center justify-between flex-wrap bg-footer p-6">
-    <p class="text-grey-lighter text-right"> version 1.0.0 | <?php echo date("Y"); ?> </p>
+    <p class="text-grey-lighter text-right"> version 1.0.1 | <?php echo date("Y"); ?> </p>
 </footer>
 <script src="js/jquery.js"></script>
 <script src = "js/scripts.js" > </script>

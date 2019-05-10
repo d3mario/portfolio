@@ -10,36 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
+Route::get('/clients', 'PagesController@listClients');
+Route::get('/caseStudy/{id}', 'PagesController@showClient');
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/about', function(){
-    return view('about');
-});
+// Route::get('/caseStudy', function(){
+//     return view('caseStudy');
+// });
 
-Route::get('/contact', function(){
-    return view('contact');
-});
-
-Route::get('/showClients', function(){
-    return view('showClients');
-});
-
-Route::get('/caseStudy/{id}', function(){
-    $client = [
-        'name' => 'Mobile Mod Center',
-        'web' => 'www.local.com',
-        'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, porro deserunt praesentium consectetur consequuntur sit illum placeat eum. Repudiandae, facilis deserunt! Provident eius voluptate corporis et omnis, dolore laboriosam nostrum.',
-        'images' => 'images/mobile-mod-center/images/mobile-mod-center-display-01.png'
-    ];
-
-    return view('caseStudy', [
-        'client' => $client
-        ]);
-});
-
-Route::get('/caseStudy', function(){
-    return view('caseStudy');
-});

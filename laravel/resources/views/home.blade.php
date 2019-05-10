@@ -10,7 +10,7 @@ Portfolio | Home
   <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline time-management" href="/about">Time Management:</a> </div>
   <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline customer-satisfaction" href="testimony">Customer Satisfaction:</a> </div>
   <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline communication" href="/contact">Relationships:</a> </div>
-  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline portfolio-icon" href="/showClients">Quality Material:</a> </div>
+  <div class="text-grey-darker text-center px-4 py-2 m-2"><a class="no-underline portfolio-icon" href="/clients">Quality Material:</a> </div>
 </div>
 
 @endsection
