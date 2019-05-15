@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Client;
+use \App\Project;
 
 class PagesController extends Controller
 {
@@ -22,21 +24,24 @@ class PagesController extends Controller
      * 
      */
     public function listClients(){
-        return view('showClients');
+        $clients = Client::all();
+
+        return view('clients.showClients', compact('clients'));
     }
 
     /**
      * 
      */
-    public function showClient(){
+    public function showClient($id){
+        $client = Client::findOrFail($id);
         $client = [
-            'name' => 'Mobile Mod Center',
-            'web' => 'www.local.com',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, porro deserunt praesentium consectetur consequuntur sit illum placeat eum. Repudiandae, facilis deserunt! Provident eius voluptate corporis et omnis, dolore laboriosam nostrum.',
-            'images' => 'images/mobile-mod-center/images/mobile-mod-center-display-01.png',
+            'name' => $client->name,
+            'web' => $client->websiteUrl,
+            'body' => $client->caseStudy,
+            'images' => 'images/'.$client->displayIcon,
         ];
     
-        return view('caseStudy', [
+        return view('clients.caseStudy', [
             'client' => $client
             ]);
     }

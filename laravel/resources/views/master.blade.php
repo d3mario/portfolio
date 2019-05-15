@@ -24,13 +24,13 @@
       <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         home
       </a>
-      <a href="about" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
+      <a href="/about" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white mr-4 no-underline">
         about
       </a>
-      <a href="clients" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="/clients" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         portfolio
       </a>
-      <a href="contact" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
+      <a href="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-grey-lighter hover:text-white no-underline">
         contact
       </a>
     </div>
