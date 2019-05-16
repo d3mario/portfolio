@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Client;
 use \App\Project;
+use Psr\Log\InvalidArgumentException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class PagesController extends Controller
 {
@@ -33,17 +35,25 @@ class PagesController extends Controller
      * 
      */
     public function showClient($id){
-        $client = Client::findOrFail($id);
-        $client = [
-            'name' => $client->name,
-            'web' => $client->websiteUrl,
-            'body' => $client->caseStudy,
-            'images' => 'images/'.$client->displayIcon,
-        ];
-    
-        return view('clients.caseStudy', [
-            'client' => $client
+        try{
+            $client = Client::findOrFail($id);
+            $client = [
+                'name' => $client->name,
+                'web' => $client->websiteUrl,
+                'body' => $client->caseStudy,
+                'images' => 'images/'.$client->displayIcon,
+            ];
+
+            return view('clients.caseStudy', [
+                'client' => $client,
+                'error' => null
             ]);
+        }catch (ModelNotFoundException $exception){
+            return view('clients.caseStudy', [
+                'error' => $exception->getMessage()
+            ]);
+        }
+
     }
 
     /**
