@@ -1,3 +1,4 @@
+{{--TODO clean up code to reduce duplicate code.--}}
 @extends ('master')
 @section('title')
 Case Study | Demario

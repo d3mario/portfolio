@@ -32,7 +32,7 @@ class PagesController extends Controller
     }
 
     /**
-     * 
+     * TODO remove logic from this controller and move it to a service class. Check for strings passed as well as integers and return exception
      */
     public function showClient($id){
         try{
