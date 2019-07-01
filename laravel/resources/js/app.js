@@ -8,7 +8,46 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
 
+    let thumbnails = Array.from(document.querySelectorAll("[rel^='smallThumbnail']"));
+    let slideButtons = Array.from(document.querySelectorAll("[rel^='slideButton']"));
+    let leftSlideButton = slideButtons[0];
+    let rightSlideButton = slideButtons[1];
+
+
+    let size = thumbnails.length;
+
+    if(size <= 1){
+        slideButtons[0].classList.add("hide");
+        slideButtons[1].classList.add("hide");
+    }
+function updateCurrentIndex() {
+        console.log(x.currentIndex());
+}
+let slider = getSlider({
+    container: document.getElementById('myslider'),
+    children: document.getElementsByClassName('slides'),
+    prop: 'opacity',
+    unit: '',
+    init: 0,
+    show: 1,
+    end: 0,
+    delay: 3,
+});
+
+
+
+// leftSlideButton.addEventListener("click", fadeSmallDisplayItem);
+// rightSlideButton.addEventListener("click", fadeSmallDisplayItem);
+
+leftSlideButton.addEventListener("click", function(){
+    slider.change(slider.prevIndex());
+});
+rightSlideButton.addEventListener("click", function(){
+    slider.change(slider.nextIndex());
+});
+slider.pause();
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31,3 +70,4 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
