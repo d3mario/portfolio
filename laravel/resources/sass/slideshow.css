@@ -1,0 +1,57 @@
+/* SLIDESHOW AREA
+	---------------------------------------------------- */
+/*#slide-show {*/
+    /*position: relative;*/
+    /*!*float: left;*!*/
+    /*!*width: !*1350px*! 100%;*!*/
+    /*height: 383px;*/
+    /*background-color: #f6f8f9;*/
+    /*border-bottom: solid 5px #e1e1e5;*/
+    /*overflow: hidden;*/
+    /*margin: 0em -2em 0em -2em;*/
+/*}*/
+
+
+    #slide-show {
+        position: relative;
+        /*float: left;*/
+        /*width: !*1350px*! 100%;*/
+        height: 150px;
+        background-color: #f6f8f9;
+        border-bottom: solid 5px #e1e1e5;
+        overflow: hidden;
+        /* margin: 0em -2em 0em -2em; */
+}
+.subtitle-text {
+    width: 50%;
+    height: 30px;
+    /*background-color: #4a8cdb;*/
+    margin: 0 auto;
+    padding: 10% 0em 0em 0em;
+}
+
+@media screen and (min-width: 300px ) and (max-width: 699px )
+{
+    .subtitle-text {
+        color: #fff;
+        width: 50%;
+        height: auto;
+        /*background-color: #4a8cdb;*/
+        margin: 0 auto;
+        padding: 10% 0em 0em 0em;
+    }
+}
+
+@media screen and (min-width: 620px) {
+
+    #slide-show {
+        position: relative;
+        /*float: left;*/
+        /*width: !*1350px*! 100%;*/
+        height: 370px;
+        background-color: #f6f8f9;
+        border-bottom: solid 5px #e1e1e5;
+        overflow: hidden;
+        /* margin: 0em -2em 0em -2em; */
+    }
+}
