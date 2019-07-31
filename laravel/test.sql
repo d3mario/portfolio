@@ -1,0 +1,3 @@
+UPDATE 'this'
+SET l = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et nisi eu quam scelerisque ultricies<span rel="caseStudy-dots">...</span> <span rel="caseStudy-more">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi sit amet auctor nisl. Aenean fermentum justo in pulvinar rhoncus. Nullam cursus eros et massa facilisis, vestibulum condimentum orci gravida. Vivamus egestas placerat diam, a convallis arcu ultricies a. Quisque sed magna sit amet lacus sollicitudin imperdiet. Quisque rutrum elit a justo dapibus iaculis. Suspendisse mauris enim, viverra vitae velit eu, malesuada finibus sem. Vivamus et ex enim. Mauris sagittis ut dui a efficitur.</span>'
+WHERE id = 1;

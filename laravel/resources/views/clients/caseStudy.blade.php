@@ -15,12 +15,18 @@ Case Study | Demario
 
           <h3>{{$client['name']}}  </h3>
 
-                <p class="case" >{{$client['body']}}</p>
-                <ul rel="caseText">
-                    <li>Test</li>
-                </ul>
-                <a class="no-underline text-blue-darkest" rel="showMoreText" href="#" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full">More</span></a>
-
+                <p class="case" rel="project-caseStudy">{!! $client['body'] !!}</p>
+                <h4>Methods/Services Provided:</h4>
+                <ul rel="caseStudy-tasks" class="more">
+                    @foreach($client['tasks'][0]->methods as $task)
+                        <li>{{$task}}</li>
+                    @endforeach
+            @foreach($client['tasks'][0]->services as $service)
+                <li>{{$service}}</li>
+            @endforeach
+        </ul>
+        <br />
+                <a class="no-underline text-blue-darkest mt-5" rel="showMoreText" href="#" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full">More</span></a>
         </div>
     @endsection
             @section('displayShowcase')

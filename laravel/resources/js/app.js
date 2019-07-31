@@ -12,9 +12,81 @@ import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
 
     let thumbnails = Array.from(document.querySelectorAll("[rel^='smallThumbnail']"));
     let slideButtons = Array.from(document.querySelectorAll("[rel^='slideButton']"));
+    let moreButton = document.querySelector("[rel^='showMoreText']");
     let leftSlideButton = slideButtons[0];
     let rightSlideButton = slideButtons[1];
 
+    let bodyText = document.querySelector("[rel^='caseText']");
+    // let caseStudy = document.querySelector("[rel^='project-caseStudy']");
+    // let caseStudyText = caseStudy.innerHTML;
+    // let previewCaseStudy = caseStudyText.slice(0, 100);
+    // let remainingCaseStudy = caseStudyText.slice(100, caseStudyText.length);
+    //
+    // let holder = document.querySelector("[rel='project-caseStudy']");
+    // holder.innerHTML = previewCaseStudy;
+
+let smallSlider = getSlider({
+    container: document.getElementById('myslider'),
+    children: document.getElementsByClassName('slides'),
+    prop: 'opacity',
+    unit: '',
+    init: 0,
+    show: 1,
+    end: 0,
+    delay: 3,
+    paused: true
+});
+
+
+leftSlideButton.addEventListener("click", function(){
+    smallSlider.change(smallSlider.prevIndex());
+});
+rightSlideButton.addEventListener("click", function(){
+    smallSlider.change(smallSlider.nextIndex());
+});
+smallSlider.resume();
+
+moreButton.addEventListener("click", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        toggleText();
+    });
+
+/**
+ * function toggleText displays more or less information in a case study
+ */
+    function toggleText() {
+
+        let dots = document.querySelector("[rel^='caseStudy-dots']");
+        let moreText = document.querySelector("[rel^='caseStudy-more']");
+        let moreTask = document.querySelector("[rel^='caseStudy-tasks']");
+
+        let buttonText = document.querySelector("[rel^='showMoreText']");
+
+        if(dots.style.display === "none"){
+            dots.style.display = "inline";
+            let spanElement = document.createElement("SPAN");
+            let spanText = document.createTextNode("More");
+            spanElement.appendChild(spanText);
+            buttonText.innerHTML = "View ";
+           spanElement.className ="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full";
+            buttonText.appendChild(spanElement);
+            moreTask.style.display = "none";
+            moreText.style.display = "none";
+        }else{
+            dots.style.display = "none";
+            let spanElement = document.createElement("SPAN");
+            let spanText = document.createTextNode("Less");
+            spanElement.appendChild(spanText);
+
+            buttonText.innerHTML = "View";
+            spanElement.className ="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full";
+            buttonText.appendChild(spanElement);
+            moreText.style.display = "inline";
+            moreTask.style.display = "inline";
+        }
+
+    }
 
     let size = thumbnails.length;
 
@@ -22,12 +94,12 @@ import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
         slideButtons[0].classList.add("hide");
         slideButtons[1].classList.add("hide");
     }
-function updateCurrentIndex() {
-        console.log(x.currentIndex());
-}
-let slider = getSlider({
-    container: document.getElementById('myslider'),
-    children: document.getElementsByClassName('slides'),
+
+
+
+let largeSlider = getSlider({
+    container: document.getElementById('my-slider'),
+    children: document.getElementsByClassName('fader'),
     prop: 'opacity',
     unit: '',
     init: 0,
@@ -41,13 +113,8 @@ let slider = getSlider({
 // leftSlideButton.addEventListener("click", fadeSmallDisplayItem);
 // rightSlideButton.addEventListener("click", fadeSmallDisplayItem);
 
-leftSlideButton.addEventListener("click", function(){
-    slider.change(slider.prevIndex());
-});
-rightSlideButton.addEventListener("click", function(){
-    slider.change(slider.nextIndex());
-});
-slider.pause();
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
