@@ -4679,7 +4679,10 @@
   .pl-24 {
     padding-left: 6rem;
   }
-  
+
+.pl-25 {
+  padding-left: 7rem;
+}
   .pt-32 {
     padding-top: 8rem;
   }
@@ -6195,6 +6198,9 @@
     z-index: auto;
   }
   
+  .z-9999 {
+    z-index: 9999;
+  }
   /**
     * Here you would add any custom utilities you need that don't come out of the
     * box with Tailwind.
@@ -28562,7 +28568,7 @@
     display: block;
     height: 200px;
     width:195px;
-    background: url("../images/sprite-icons.png") repeat scroll -540px 550px transparent;/*margin: 0 auto;*/
+    background: url("../images/sprite-icons.png") repeat scroll -520px 550px transparent;/*margin: 0 auto;*/
   }
   
   .linkedin-icon {
@@ -28599,6 +28605,10 @@
 
     .modal-content{
       display: none;
+    }
+
+    .modal{
+      transition: opacity 0.25s ease;
     }
     
     .small-slide-container{
@@ -28658,7 +28668,7 @@
 
     .case {
       //height: 60px;
-      padding: 15px;
+      //padding: 15px 15px 15px 45px;
       line-height: 25px;
       display: block;
       transition: height 1s, visibility 1s, opacity 2s ease-out;
@@ -28683,5 +28693,70 @@
       display:none;
     }
 
+
+    h1.question-header {
+      color: #3f4c52;
+      text-align: left;
+      background-image:url(../images/time-management-icon.png);
+      background-repeat: no-repeat;
+      background-position: 40px 0px;
+      height: 48px;
+      margin: 0px;
+      padding: 0px 0px 0px 100px;
+    }
+    h1.portfolio-question-header {
+      color: #3f4c52;
+      text-align: left;
+      background-image:url(../images/portfolio-icon.png);
+      background-repeat: no-repeat;
+      background-position: 0px 5px;
+      height: 55px;
+      overflow: auto;
+      margin: 0px;
+      padding: 10px 0px 0px 50px;
+    }
+    h1.contact-question-header {
+      color: #3f4c52;
+      text-align: left;
+      background-image:url(../images/communication-icon.png);
+      background-repeat: no-repeat;
+      background-position: 40px 0px;
+      height: 48px;
+      margin: 0px;
+      padding: 0px 0px 0px 100px;
+    }
+
+    .testimony-question-header	{
+      color: #3f4c52;
+      text-align: left;
+      background-image:url(../images/customer-satisfaction-icon.png);
+      background-repeat: no-repeat;
+      background-position: 40px 0px;
+      height: 48px;
+      margin: 0px;
+      padding: 0px 0px 0px 100px;
+    }
+
+    .q2 {
+      color: #3f4c52;
+      font-size: 3.75em;
+      text-align: left;
+      margin: 0px;
+      padding: 100px 0px 0px 100px;
+    }
+    article#introduction h2 {
+      font-size: 2.5em;
+      color: #334c5b;
+      margin: 0px;
+      padding: 0px;
+      line-height: 45px;
+    }
+    article#introduction h2.grey {
+      color: #999;
+    }
+    
+    .services-heading {
+      font-size: .75em;
+    }
   }
   

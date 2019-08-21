@@ -90,6 +90,10 @@ render._withStripped = true
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/simple-slider/src/simpleslider */ "./node_modules/simple-slider/src/simpleslider.js");
+/* harmony import */ var _node_modules_vanilla_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vanilla-modal */ "./node_modules/vanilla-modal/dist/index.js");
+/* harmony import */ var _node_modules_vanilla_modal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vanilla_modal__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_tingle_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/tingle.js */ "./node_modules/tingle.js/dist/tingle.min.js");
+/* harmony import */ var _node_modules_tingle_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_tingle_js__WEBPACK_IMPORTED_MODULE_2__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -99,12 +103,58 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
+
+ //let modal = new VanillaModal();
+// instanciate new modal
+
+var modal = new _node_modules_tingle_js__WEBPACK_IMPORTED_MODULE_2___default.a.modal({
+  footer: true,
+  stickyFooter: false,
+  closeMethods: ['overlay', 'button', 'escape'],
+  closeLabel: "Close",
+  cssClass: ['custom-class-1', 'custom-class-2'],
+  onOpen: function onOpen() {
+    console.log('modal open');
+  },
+  onClose: function onClose() {
+    console.log('modal closed');
+  },
+  beforeClose: function beforeClose() {
+    // here's goes some logic
+    // e.g. save content before closing the modal
+    return true; // close the modal
+
+    return false; // nothing happens
+  }
+}); // set content
+
+modal.setContent('<h1>here\'s some content</h1>'); // add a button
+
+modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function () {
+  // here goes some logic
+  modal.close();
+}); // add another button
+
+modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function () {
+  // here goes some logic
+  modal.close();
+}); // open modal
+
+modal.open(); // close modal
+
+modal.close(); // console.log(modal);
+
 var thumbnails = Array.from(document.querySelectorAll("[rel^='smallThumbnail']"));
 var slideButtons = Array.from(document.querySelectorAll("[rel^='slideButton']"));
 var moreButton = document.querySelector("[rel^='showMoreText']");
 var leftSlideButton = slideButtons[0];
 var rightSlideButton = slideButtons[1];
-var bodyText = document.querySelector("[rel^='caseText']"); // let caseStudy = document.querySelector("[rel^='project-caseStudy']");
+var bodyText = document.querySelector("[rel^='caseText']");
+var viewContentButton = document.querySelector("[rel='viewContent']");
+viewContentButton.addEventListener("click", function () {
+  var casestudyModal = document.querySelector('.modal');
+  casestudyModal.classList.toggle('opacity-100');
+}); // let caseStudy = document.querySelector("[rel^='project-caseStudy']");
 // let caseStudyText = caseStudy.innerHTML;
 // let previewCaseStudy = caseStudyText.slice(0, 100);
 // let remainingCaseStudy = caseStudyText.slice(100, caseStudyText.length);

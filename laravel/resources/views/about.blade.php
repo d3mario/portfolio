@@ -1,45 +1,64 @@
+{{--TODO clean up code to reduce duplicate code.--}}
 @extends ('master')
 @section('title')
-About | Demario
+    Case Study | Demario
+@endsection
+@if(is_null($error))
+@section('headline')
+    <h1 class="portfolio-question-header"> Do you agree</h1>
+    <h2 class="case-study-question pl-12">Quality Material Should Represent Your Brand?</h2>
 @endsection
 @section('content')
-    <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">
+    <!-- <div class="text-grey-darker font-bold text-xl mb-2">Working for you. Here for you. </div> -->
 
-    <div class="mb-8">
-      <div class="text-black font-bold text-xl mb-2">Working for you. Here for you. </div>
-      <p class="antipasto text-grey-darker text-base">As your multimedia specialist it is with my greatest pleasure to maintain the highest level of excellence,
-            integrity and respect for you and your brand while communicating to the prospective audience with creative
-            material!</p>
-        <p class="text-grey-darker"><a class="no-underline text-blue-darkest" href="portfolio.php" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">More</a></span></p>
-    </div>
+    <div class="text-grey-darker text-left px-1 mb-8 pl-12 pt-5">
+
+        <h3>{{$client['name']}}  </h3>
+
+        <p class="case" rel="project-caseStudy">{!! $client['body'] !!}</p>
+        <h4 class="pt-4">Methods/Services Provided:</h4>
+        <ul rel="caseStudy-tasks" class="more">
+            @foreach($client['tasks'][0]->methods as $task)
+                <li>{{$task}}</li>
+            @endforeach
+            @foreach($client['tasks'][0]->services as $service)
+                <li>{{$service}}</li>
+            @endforeach
+        </ul>
+        <br />
+        <a class="no-underline text-blue-darkest mt-5" rel="showMoreText" href="#" >View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full">More</span></a>
     </div>
 @endsection
-        @section('displayShowcase')
+@section('displayShowcase')
 
-  <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
-          <!-- <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
-    </div> -->
-    </div>
-  <p>
-            <a rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="samples-text" rel="spanText">Services</span></a><a href="" target="_blank">View <span class="samples-text">print work</span></a>
+    <div id="myslider" class="small-slide-container h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5 small-slide" >
+        <img class="absolute" id="left-slideshow-button" rel="slideButtonLeft"src="../images/left-slidder-button.png" />
+        <img class="absolute" id="right-slideshow-button" rel="slideButtonRight" src="../images/right-slidder-button.png" />
+        @foreach($client['images'] as $image)
+            <div class="slides center">
+                <img src="../images/{{$image->thumbnail}}" rel="smallThumbnail{{$loop->index}}" />
+            </div>
+        @endforeach
+
+        <p class="text">
+            <a class="no-underline text-blue-darkest" rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a><a class="no-underline text-blue-darkest" href="" target="_blank">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">print work</span></a>
         </p>
+        {{--</div>--}}
 
-
-
-</div>
+    </div>
     <div id="modal" rel="js-modal">
-        <!-- <?php
+    <!-- <?php
 
-        //$largeImageCount == $count;
-        //$largeClientCompositionsViews = $client->getClientCompositonViews();
-//        foreach($clientLargeCompositions as $largeComp)
-//        {
-//            echo ("<img class=\"modal-image\" src=images/$largeComp alt=\" \" rel=\"largeModalImage viewLargeDisplay0\">");
-////            $count++;
-//        }
-                    // echo ("<img class=\"modal-image\" src=images/$clientLargeCompositions[0] alt=\" \" rel=\"largeModalImage\">");
+    //$largeImageCount == $count;
+    //$largeClientCompositionsViews = $client->getClientCompositonViews();
+    //        foreach($clientLargeCompositions as $largeComp)
+    //        {
+    //            echo ("<img class=\"modal-image\" src=images/$largeComp alt=\" \" rel=\"largeModalImage viewLargeDisplay0\">");
+    ////            $count++;
+    //        }
+    // echo ("<img class=\"modal-image\" src=images/$clientLargeCompositions[0] alt=\" \" rel=\"largeModalImage\">");
 
-        ?> -->
+    ?> -->
     </div>
     <div id="servicesDisplay" rel="js-service-modal">
         <div class="modal-content">
@@ -61,3 +80,27 @@ About | Demario
     </div>
     </div>
 @endsection
+@else
+@section('headline')
+    <h1 class="portfolio-question-header"> Do you agree</h1>
+    <h2 class="case-study-question">Quality Material Should Represent Your Brand?</h2>
+@endsection
+@section('content')
+    <!-- <div class="text-grey-darker font-bold text-xl mb-2">Working for you. Here for you. </div> -->
+
+    <div class="text-grey-darker text-left px-1 mb-8">
+
+        <h3>{{$error}}  </h3>
+
+        <p class="case">Oops!</p>
+    </div>
+@endsection
+@section('displayShowcase')
+
+    <div class="h-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center xl:w-2/5" style="background-image: url('images/mobile-mod-center/images/mobile-mod-center-display-01.png')" title="Woman holding a mug">
+
+    </div>
+
+    </div>
+@endsection
+@endif

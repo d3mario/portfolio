@@ -50,6 +50,7 @@
         </div> -->
     </nav>
     </header>
+    
     <div class="my-slider">
             <div class="fader" rel="js-slide-image-01">
                 <div class="subtitle-text">
@@ -65,14 +66,18 @@
                 </div>
             </div>
     </div>
+
+    @yield('modal')
+        
 <div class="container mx-auto .w-full">
+  
     <main class="xl:p-16">
     @yield('headline')
     @yield('leadingIcons')
     
 
     <div class="sm:inline-flex md:block lg:flex xl:flex">
-    {{--<div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5">--}}
+    <!-- <div class="p-4 flex flex-col justify-between leading-normal xl:w-2/5"> -->
     @yield('content')
 
     
@@ -85,6 +90,7 @@
 <footer class="flex items-center justify-between flex-wrap bg-footer p-6">
     <p class="text-grey-lighter text-right"> version 1.0.1 | <?php echo date("Y"); ?> </p>
 </footer>
+
 <!-- <script src="js/jquery.js"></script> -->
 <script src = "{{mix('js/manifest.js')}}" > </script>
 <script src = "{{mix('js/vendor.js')}}" > </script>
@@ -93,5 +99,6 @@
 
 </main>
 </div>
+
     </body>
 </html>

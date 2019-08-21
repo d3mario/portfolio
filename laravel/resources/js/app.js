@@ -9,7 +9,52 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
+import VanillaModal from '../../node_modules/vanilla-modal';
+import tingle from '../../node_modules/tingle.js';
 
+    //let modal = new VanillaModal();
+// instanciate new modal
+var modal = new tingle.modal({
+    footer: true,
+    stickyFooter: false,
+    closeMethods: ['overlay', 'button', 'escape'],
+    closeLabel: "Close",
+    cssClass: ['custom-class-1', 'custom-class-2'],
+    onOpen: function() {
+        console.log('modal open');
+    },
+    onClose: function() {
+        console.log('modal closed');
+    },
+    beforeClose: function() {
+        // here's goes some logic
+        // e.g. save content before closing the modal
+        return true; // close the modal
+        return false; // nothing happens
+    }
+});
+
+// set content
+modal.setContent('<h1>here\'s some content</h1>');
+
+// add a button
+modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
+    // here goes some logic
+    modal.close();
+});
+
+// add another button
+modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function() {
+    // here goes some logic
+    modal.close();
+});
+
+// open modal
+modal.open();
+
+// close modal
+modal.close();
+    // console.log(modal);
     let thumbnails = Array.from(document.querySelectorAll("[rel^='smallThumbnail']"));
     let slideButtons = Array.from(document.querySelectorAll("[rel^='slideButton']"));
     let moreButton = document.querySelector("[rel^='showMoreText']");
@@ -17,6 +62,13 @@ import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
     let rightSlideButton = slideButtons[1];
 
     let bodyText = document.querySelector("[rel^='caseText']");
+    let viewContentButton = document.querySelector("[rel='viewContent']");
+
+    viewContentButton.addEventListener("click", function(){
+        let casestudyModal = document.querySelector('.modal');
+        casestudyModal.classList.toggle('opacity-100');
+    });
+
     // let caseStudy = document.querySelector("[rel^='project-caseStudy']");
     // let caseStudyText = caseStudy.innerHTML;
     // let previewCaseStudy = caseStudyText.slice(0, 100);

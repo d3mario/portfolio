@@ -3,7 +3,7 @@
 Portfolio | Home
 @endsection
 @section('headline')
-<h1 class="text-center"> What do you value</h1>
+<h1 class="text-center"> What do you value?</h1>
 @endsection
 @section('leadingIcons')
 <div class="sm:inline-flex md:block lg:flex xl:flex">
