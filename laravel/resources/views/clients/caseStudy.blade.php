@@ -6,36 +6,41 @@ Case Study | Demario
 @if(is_null($error))
 
     @section('modal')
-    <div class="modal opacity-0 pointer-events-none absolute w-full h-full top-0 left-0 flex items-center justify-center z-9999">
+    <div class="modal opacity-0 pointer-events-none absolute w-full h-full top-0 left-0 flex items-center justify-center z-9999" rel="caseStudyModal">
   <div class="modal-overlay absolute w-full h-full bg-black opacity-25 top-0 left-0 cursor-pointer"></div>
-  <!-- <div class="absolute w-3/4 h-32 bg-white rounded-sm shadow-lg flex items-center justify-center text-2xl"> -->
-                    <!-- <p class="text-grey-darker services-heading"> Services that were provided to:{{$client['name']}} </p> -->
 
                     <!-- @foreach($client['images'] as $image)
                         <img src="../images/{{$image->display_image}}" rel="smallThumbnail{{$loop->index}}" />
                     @endforeach -->
                     <img class="display-1" src="../images/{{$client['images'][0]->display_image}}" />
-                <!-- <table class="user-list">
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2">
-                            <ul class="languages">
-
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="heading">Web Design</td><td> <div class="progressBar" rel="max 100"><div></div></div></td><td>100%</td></tr><tr><td class="heading"> Brand Development</td><td> <div class="progressBar" rel="max  100"><div></div></div></td><td> 100%</td></tr><tr><td class="heading">LANGUAGES / SOFTWARE </td><td colspan="2"><ul class="languages"><li><span class="samples-text"> Adobe FireWorks </span></li>  </ul></td>            </tr></tbody>
-                </table> -->
-        <!-- </div> -->
   </div>
+
+{{--    Provided services--}}
+    <div class="modal opacity-0 pointer-events-none absolute w-full h-full top-0 left-0 flex items-center justify-center z-9999" rel="servicesProvidedModal">
+        <div class="modal-overlay absolute w-full h-full bg-black opacity-25 top-0 left-0 cursor-pointer"></div>
+        <div class="absolute w-3/4 h-32 bg-white rounded-sm shadow-lg flex items-center justify-center text-2xl">
+
+        <table class="user-list">
+            <thead>
+            <tr>
+                <th> Services that were provided to:{{$client['name']}}</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                    <ul class="languages">
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="heading">Web Design</td><td> <div class="progressBar" rel="max 100"><div></div></div></td><td>100%</td></tr><tr><td class="heading"> Brand Development</td><td> <div class="progressBar" rel="max  100"><div></div></div></td><td> 100%</td></tr><tr><td class="heading">LANGUAGES / SOFTWARE </td><td colspan="2"><ul class="languages"><li><span class="samples-text"> Adobe FireWorks </span></li>  </ul></td>            </tr></tbody>
+        </table>
+        <!-- </div> -->
+    </div>
 </div>
     @section('headline')
     <h1 class="portfolio-question-header"> Do you agree</h1>
@@ -74,8 +79,8 @@ Case Study | Demario
       @endforeach
 
         <p class="text">
-            <a class="no-underline text-blue-darkest" rel="servicesProvided" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a>
-            <a class="no-underline text-blue-darkest" rel="viewContent">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">print work</span></a>
+            <a class="no-underline text-blue-darkest" rel="viewServices" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a>
+            <a class="no-underline text-blue-darkest" rel="viewContent">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">{{$client['projectType']}} </span></a>
         </p>
     {{--</div>--}}
 

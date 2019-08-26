@@ -7,6 +7,7 @@ use \App\Client;
 use \App\Project;
 use Psr\Log\InvalidArgumentException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use \App\Services\ClientServices;
 
 class PagesController extends Controller
 {
@@ -16,7 +17,7 @@ class PagesController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function about(){
         $task = '[{
@@ -54,7 +55,7 @@ class PagesController extends Controller
 
 
     /**
-     * 
+     *
      */
     public function listClients(){
         $clients = Client::all();
@@ -70,7 +71,10 @@ class PagesController extends Controller
             $client = Client::findOrFail($id);
             $images = $client->projects[0]["images"];
             $tasks = json_decode($client->projects[0]["tasks"]);
+            $projectId = $client->projects[0]["projectType"];
 
+            $type = new ClientServices($projectId);
+            $value = $type->getProjectType();
 
             $json = json_decode($images);
             $client = [
@@ -78,8 +82,10 @@ class PagesController extends Controller
                 'web' => $client->websiteUrl,
                 'body' => $client->caseStudy,
                 'images' => $json,
-                'tasks' => $tasks
+                'tasks' => $tasks,
+                'projectType' => $value
             ];
+
 
             return view('clients.caseStudy', [
                 'client' => $client,
@@ -95,7 +101,7 @@ class PagesController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function contact(){
         return view('contact');

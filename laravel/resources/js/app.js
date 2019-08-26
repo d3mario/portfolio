@@ -63,10 +63,16 @@ modal.close();
 
     let bodyText = document.querySelector("[rel^='caseText']");
     let viewContentButton = document.querySelector("[rel='viewContent']");
+    let viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 
     viewContentButton.addEventListener("click", function(){
-        let casestudyModal = document.querySelector('.modal');
+        let casestudyModal = document.querySelector("[rel='caseStudyModal']");
         casestudyModal.classList.toggle('opacity-100');
+    });
+
+    viewProvidedServiceModalButton.addEventListener("click", function(){
+        let servicesProvidedModal = document.querySelector("[rel='servicesProvidedModal']");
+        servicesProvidedModal.classList.toggle('opacity-100');
     });
 
     // let caseStudy = document.querySelector("[rel^='project-caseStudy']");

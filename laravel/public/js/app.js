@@ -151,9 +151,14 @@ var leftSlideButton = slideButtons[0];
 var rightSlideButton = slideButtons[1];
 var bodyText = document.querySelector("[rel^='caseText']");
 var viewContentButton = document.querySelector("[rel='viewContent']");
+var viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 viewContentButton.addEventListener("click", function () {
-  var casestudyModal = document.querySelector('.modal');
+  var casestudyModal = document.querySelector("[rel='caseStudyModal']");
   casestudyModal.classList.toggle('opacity-100');
+});
+viewProvidedServiceModalButton.addEventListener("click", function () {
+  var servicesProvidedModal = document.querySelector("[rel='servicesProvidedModal']");
+  servicesProvidedModal.classList.toggle('opacity-100');
 }); // let caseStudy = document.querySelector("[rel^='project-caseStudy']");
 // let caseStudyText = caseStudy.innerHTML;
 // let previewCaseStudy = caseStudyText.slice(0, 100);
@@ -409,8 +414,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/demario/Sites/portfolio/laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/demario/Sites/portfolio/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/portfolio/laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/html/portfolio/laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
