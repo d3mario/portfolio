@@ -43,6 +43,9 @@ Case Study | Demario
     </div>
 </div>
     @section('headline')
+    <div id="app">
+
+</div>
     <h1 class="portfolio-question-header"> Do you agree</h1>
     <h2 class="case-study-question pl-12">Quality Material Should Represent Your Brand?</h2>
     @endsection
@@ -90,6 +93,7 @@ Case Study | Demario
     @endsection
 @else
 @section('headline')
+
     <h1 class="portfolio-question-header"> Do you agree</h1>
     <h2 class="case-study-question pl-32">Quality Material Should Represent Your Brand?</h2>
 @endsection
