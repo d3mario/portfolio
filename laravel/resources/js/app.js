@@ -69,7 +69,10 @@ let viewContentButton = document.querySelector("[rel='viewContent']");
 let viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 
 viewContentButton.addEventListener("click", function(){
-    ReactDOM.render(<Demo />, document.querySelector('#app'));
+    ReactDOM.render(
+    <Demo prop='let'/>, 
+    document.querySelector('#app')
+    );
 
     let casestudyModal = document.querySelector("[rel='caseStudyModal']");
    // casestudyModal.classList.toggle('opacity-100');

@@ -77,7 +77,9 @@ var bodyText = document.querySelector("[rel^='caseText']");
 var viewContentButton = document.querySelector("[rel='viewContent']");
 var viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 viewContentButton.addEventListener("click", function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Example__WEBPACK_IMPORTED_MODULE_1__["default"], null), document.querySelector('#app'));
+  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Example__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    prop: "let"
+  }), document.querySelector('#app'));
   var casestudyModal = document.querySelector("[rel='caseStudyModal']"); // casestudyModal.classList.toggle('opacity-100');
 });
 viewProvidedServiceModalButton.addEventListener("click", function () {
