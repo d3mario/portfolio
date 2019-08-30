@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Example__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
+/* harmony import */ var _components_Showcase__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Showcase */ "./resources/js/components/Showcase.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/simple-slider/src/simpleslider */ "./node_modules/simple-slider/src/simpleslider.js");
@@ -77,8 +77,8 @@ var bodyText = document.querySelector("[rel^='caseText']");
 var viewContentButton = document.querySelector("[rel='viewContent']");
 var viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 viewContentButton.addEventListener("click", function () {
-  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Example__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    prop: "let"
+  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Showcase__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    name: thumbnails[0].src
   }), document.querySelector('#app'));
   var casestudyModal = document.querySelector("[rel='caseStudyModal']"); // casestudyModal.classList.toggle('opacity-100');
 });
@@ -232,16 +232,15 @@ if (token) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Example.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/Example.js ***!
-  \********************************************/
+/***/ "./resources/js/components/Showcase.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Showcase.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SimpleModal; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
@@ -254,37 +253,58 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
 
-function getModalStyle() {
-  var top = 50 + rand();
-  var left = 50 + rand();
-  return {
-    top: "".concat(top, "%"),
-    left: "".concat(left, "%"),
-    transform: "translate(-".concat(top, "%, -").concat(left, "%)")
-  };
-}
+var Showcase =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Showcase, _React$Component);
 
-var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
-  return {
-    paper: {
-      position: 'absolute',
-      width: 400,
-      backgroundColor: theme.palette.background.paper,
-      border: '2px solid #000',
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3)
+  function Showcase(props) {
+    var _this;
+
+    _classCallCheck(this, Showcase);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Showcase).call(this, props));
+    _this.state = {
+      name: props.name
+    };
+    return _this;
+  }
+
+  _createClass(Showcase, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SimpleModal, {
+        name: this.state.name
+      });
     }
-  };
-});
-function SimpleModal() {
+  }]);
+
+  return Showcase;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+function SimpleModal(props) {
   var classes = useStyles(); // getModalStyle is not a pure function, we roll the style only on the first render
 
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(getModalStyle),
@@ -317,10 +337,40 @@ function SimpleModal() {
     className: classes.paper
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     id: "simple-modal-title"
-  }, "Text in a modal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.name, "!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "simple-modal-description"
-  }, "Duis mollis, est non commodo luctus, nisi erat porttitor ligula."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SimpleModal, null))));
+  }, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.name
+  }))));
 }
+
+function rand() {
+  return Math.round(Math.random() * 20) - 10;
+}
+
+function getModalStyle() {
+  var top = 50 + rand();
+  var left = 50 + rand();
+  return {
+    top: "".concat(top, "%"),
+    left: "".concat(left, "%"),
+    transform: "translate(-".concat(top, "%, -").concat(left, "%)")
+  };
+}
+
+var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
+  return {
+    paper: {
+      position: 'absolute',
+      width: 400,
+      backgroundColor: theme.palette.background.paper,
+      border: '2px solid #000',
+      boxShadow: theme.shadows[5],
+      padding: theme.spacing(2, 4, 3)
+    }
+  };
+});
+/* harmony default export */ __webpack_exports__["default"] = (Showcase);
 
 /***/ }),
 

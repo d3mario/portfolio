@@ -9,7 +9,7 @@ require('./bootstrap');
 
 // window.Vue = require('vue');
 import React from 'react';
-import Demo from './components/Example';
+import Demo from './components/Showcase';
 import ReactDOM from 'react-dom';
 
 import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
@@ -70,7 +70,7 @@ let viewProvidedServiceModalButton = document.querySelector("[rel='viewServices'
 
 viewContentButton.addEventListener("click", function(){
     ReactDOM.render(
-    <Demo prop='let'/>, 
+    <Demo name= {thumbnails[0].src}/>, 
     document.querySelector('#app')
     );
 
