@@ -9,10 +9,11 @@ Case Study | Demario
     <div class="modal opacity-0 pointer-events-none absolute w-full h-full top-0 left-0 flex items-center justify-center z-9999" rel="caseStudyModal">
   <div class="modal-overlay absolute w-full h-full bg-black opacity-25 top-0 left-0 cursor-pointer"></div>
 
-                    <!-- @foreach($client['images'] as $image)
-                        <img src="../images/{{$image->display_image}}" rel="smallThumbnail{{$loop->index}}" />
-                    @endforeach -->
-                    <img class="display-1" src="../images/{{$client['images'][0]->display_image}}" />
+
+
+                    @foreach($client['images'] as $image)
+                        <img src="../images/{{$image->display_image}}" rel="displayImage" " />
+                    @endforeach                     
   </div>
 
 {{--    Provided services--}}
@@ -43,9 +44,7 @@ Case Study | Demario
     </div>
 </div>
     @section('headline')
-    <div id="app">
-
-</div>
+    <div id="app"></div>
     <h1 class="portfolio-question-header"> Do you agree</h1>
     <h2 class="case-study-question pl-12">Quality Material Should Represent Your Brand?</h2>
     @endsection
@@ -77,13 +76,13 @@ Case Study | Demario
           <img class="absolute" id="right-slideshow-button" rel="slideButtonRight" src="../images/right-slidder-button.png" />
           @foreach($client['images'] as $image)
             <div class="slides center">
-                <img src="../images/{{$image->thumbnail}}" rel="smallThumbnail{{$loop->index}}" />
+                <a class="no-underline text-blue-darkest " rel="viewContent"><img src="../images/{{$image->thumbnail}}" rel="smallThumbnail{{$loop->index}}" /></a>
             </div>
-      @endforeach
+         @endforeach
 
         <p class="text">
             <a class="no-underline text-blue-darkest" rel="viewServices" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a>
-            <a class="no-underline text-blue-darkest" rel="viewContent">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">{{$client['projectType']}} </span></a>
+            View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">{{$client['projectType']}} </span>
         </p>
     {{--</div>--}}
 

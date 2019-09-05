@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,89 +6,42 @@
 
 require('./bootstrap');
 
-// window.Vue = require('vue');
 import React from 'react';
-import Demo from './components/Showcase';
+import LightboxDisplay from './components/LightboxDisplay';
 import ReactDOM from 'react-dom';
+import Demo from './components/Example';
 
 import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
-import tingle from '../../node_modules/tingle.js';
 
-//let modal = new VanillaModal();
-// instanciate new modal
-// var modal = new tingle.modal({
-//     footer: true,
-//     stickyFooter: false,
-//     closeMethods: ['overlay', 'button', 'escape'],
-//     closeLabel: "Close",
-//     cssClass: ['custom-class-1', 'custom-class-2'],
-//     onOpen: function() {
-//         console.log('modal open');
-//     },
-//     onClose: function() {
-//         console.log('modal closed');
-//     },
-//     beforeClose: function() {
-//         // here's goes some logic
-//         // e.g. save content before closing the modal
-//         return true; // close the modal
-//         return false; // nothing happens
-//     }
-// });
 
-// // set content
-// modal.setContent('<h1>here\'s some content</h1>');
-
-// // add a button
-// modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
-//     // here goes some logic
-//     modal.close();
-// });
-
-// // add another button
-// modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function() {
-//     // here goes some logic
-//     modal.close();
-// });
-
-// // open modal
-// modal.open();
-
-// // close modal
-// modal.close();
-// console.log(modal);
 let thumbnails = Array.from(document.querySelectorAll("[rel^='smallThumbnail']"));
 let slideButtons = Array.from(document.querySelectorAll("[rel^='slideButton']"));
+let displayImages = Array.from(document.querySelectorAll("[rel^='displayImage']"));
 let moreButton = document.querySelector("[rel^='showMoreText']");
 let leftSlideButton = slideButtons[0];
 let rightSlideButton = slideButtons[1];
-
-let bodyText = document.querySelector("[rel^='caseText']");
-let viewContentButton = document.querySelector("[rel='viewContent']");
 let viewProvidedServiceModalButton = document.querySelector("[rel='viewServices']");
 
-viewContentButton.addEventListener("click", function(){
+let viewContentButton = document.querySelector("[rel='viewContent']");
+
+viewContentButton.addEventListener("click", function(e){
     ReactDOM.render(
-    <Demo name= {thumbnails[0].src}/>, 
+        <LightboxDisplay images={displayImages} isOpen="true" />,
+        // <ModalDisplay />,
+        // <Demo name= {displayImages[0].src}/>, 
     document.querySelector('#app')
     );
-
-    let casestudyModal = document.querySelector("[rel='caseStudyModal']");
-   // casestudyModal.classList.toggle('opacity-100');
 });
 
-viewProvidedServiceModalButton.addEventListener("click", function(){
-    let servicesProvidedModal = document.querySelector("[rel='servicesProvidedModal']");
-    servicesProvidedModal.classList.toggle('opacity-100');
+viewProvidedServiceModalButton.addEventListener("click", function(e){
+    ReactDOM.render(
+        // <ModalDisplay />,
+        <Demo name= {displayImages[0].src}/>, 
+    document.querySelector('#app')
+    );
 });
 
-// let caseStudy = document.querySelector("[rel^='project-caseStudy']");
-// let caseStudyText = caseStudy.innerHTML;
-// let previewCaseStudy = caseStudyText.slice(0, 100);
-// let remainingCaseStudy = caseStudyText.slice(100, caseStudyText.length);
-//
-// let holder = document.querySelector("[rel='project-caseStudy']");
-// holder.innerHTML = previewCaseStudy;
+
 
 let smallSlider = getSlider({
     container: document.getElementById('myslider'),
@@ -117,7 +69,6 @@ moreButton.addEventListener("click", function(e){
     e.preventDefault();
     toggleText();
 });
-
 
 
 /**
@@ -175,12 +126,3 @@ let largeSlider = getSlider({
     end: 0,
     delay: 3,
 });
-
-
-
-// leftSlideButton.addEventListener("click", fadeSmallDisplayItem);
-// rightSlideButton.addEventListener("click", fadeSmallDisplayItem);
-
-
-
-

@@ -41,7 +41,7 @@ function SimpleModal(props) {
           onClose={handleClose}
         >
           <div style={modalStyle} className={classes.paper}>
-            <h2 id="simple-modal-title">{props.name}!</h2>
+            {/* <h2 id="simple-modal-title">{props.name}!</h2> */}
             <p id="simple-modal-description"> </p>
                 <img src={props.name} />
           </div>
