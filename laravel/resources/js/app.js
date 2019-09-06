@@ -36,7 +36,8 @@ viewContentButton.addEventListener("click", function(e){
 viewProvidedServiceModalButton.addEventListener("click", function(e){
     ReactDOM.render(
         // <ModalDisplay />,
-        <Demo name= {displayImages[0].src}/>, 
+
+        <Demo name= {displayImages[0].src} isOpen="true"/>, 
     document.querySelector('#app')
     );
 });

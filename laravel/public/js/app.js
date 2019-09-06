@@ -47,7 +47,8 @@ viewContentButton.addEventListener("click", function (e) {
 viewProvidedServiceModalButton.addEventListener("click", function (e) {
   react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( // <ModalDisplay />,
   react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Example__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    name: displayImages[0].src
+    name: displayImages[0].src,
+    isOpen: "true"
   }), document.querySelector('#app'));
 });
 var smallSlider = Object(_node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_4__["getSlider"])({
@@ -193,90 +194,9 @@ if (token) {
   !*** ./resources/js/components/Example.js ***!
   \********************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SimpleModal; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
-/* harmony import */ var _material_ui_core_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Modal */ "./node_modules/@material-ui/core/esm/Modal/index.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
-
-function getModalStyle() {
-  var top = 50 + rand();
-  var left = 50 + rand();
-  return {
-    top: "".concat(top, "%"),
-    left: "".concat(left, "%"),
-    transform: "translate(-".concat(top, "%, -").concat(left, "%)")
-  };
-}
-
-var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(function (theme) {
-  return {
-    paper: {
-      position: 'absolute',
-      width: 400,
-      backgroundColor: theme.palette.background.paper,
-      border: '2px solid #000',
-      boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3)
-    }
-  };
-});
-function SimpleModal() {
-  var classes = useStyles(); // getModalStyle is not a pure function, we roll the style only on the first render
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(getModalStyle),
-      _React$useState2 = _slicedToArray(_React$useState, 1),
-      modalStyle = _React$useState2[0];
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(false),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      open = _React$useState4[0],
-      setOpen = _React$useState4[1];
-
-  var handleOpen = function handleOpen() {
-    setOpen(true);
-  };
-
-  var handleClose = function handleClose() {
-    setOpen(false);
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Click to get the full Modal experience!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "button",
-    onClick: handleOpen
-  }, "Open Modal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    "aria-labelledby": "simple-modal-title",
-    "aria-describedby": "simple-modal-description",
-    open: open,
-    onClose: handleClose
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: modalStyle,
-    className: classes.paper
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    id: "simple-modal-title"
-  }, "Text in a modal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    id: "simple-modal-description"
-  }, "Duis mollis, est non commodo luctus, nisi erat porttitor ligula."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SimpleModal, null))));
-}
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/portfolio/laravel/resources/js/components/Example.js: Unexpected token (10:2)\n\n\u001b[0m \u001b[90m  8 | \u001b[39m    let toggleModalBox \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m}\u001b[0m\n    at Object.raise (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.parseExprAtom (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8828:20)\n    at Object.parseExprAtom (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:3599:20)\n    at Object.parseExprSubscripts (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Object.parseMaybeUnary (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Object.parseExprOps (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Object.parseMaybeConditional (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8253:23)\n    at Object.parseMaybeAssign (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8200:21)\n    at Object.parseVar (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10439:26)\n    at Object.parseVarStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10258:10)\n    at Object.parseStatementContent (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9855:21)\n    at Object.parseStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseBlock (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10335:10)\n    at Object.parseFunctionBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9408:24)\n    at Object.parseFunctionBodyAndFinish (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9378:10)\n    at Object.parseMethod (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9332:10)\n    at Object.pushClassMethod (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10767:30)\n    at Object.parseClassMemberWithIsStatic (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10692:12)\n    at Object.parseClassMember (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10631:10)\n    at withTopicForbiddingContext (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10586:14)\n    at Object.withTopicForbiddingContext (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9683:14)\n    at Object.parseClassBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10563:10)\n    at Object.parseClass (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10537:22)\n    at Object.parseExportDefaultExpression (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10962:19)\n    at Object.parseExport (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10868:31)\n    at Object.parseStatementContent (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9892:27)\n    at Object.parseStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/var/www/html/portfolio/laravel/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)");
 
 /***/ }),
 
