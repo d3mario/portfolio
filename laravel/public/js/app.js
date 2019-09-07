@@ -15,13 +15,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_Example__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
-/* harmony import */ var _node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../node_modules/simple-slider/src/simpleslider */ "./node_modules/simple-slider/src/simpleslider.js");
+/* harmony import */ var _components_Showcase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Showcase */ "./resources/js/components/Showcase.js");
+/* harmony import */ var _node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../node_modules/simple-slider/src/simpleslider */ "./node_modules/simple-slider/src/simpleslider.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 
@@ -45,13 +47,12 @@ viewContentButton.addEventListener("click", function (e) {
   document.querySelector('#app'));
 });
 viewProvidedServiceModalButton.addEventListener("click", function (e) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( // <ModalDisplay />,
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Example__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    name: displayImages[0].src,
+  react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_LightboxDisplay__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    images: displayImages,
     isOpen: "true"
   }), document.querySelector('#app'));
 });
-var smallSlider = Object(_node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_4__["getSlider"])({
+var smallSlider = Object(_node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_5__["getSlider"])({
   container: document.getElementById('myslider'),
   children: document.getElementsByClassName('slides'),
   prop: 'opacity',
@@ -118,7 +119,7 @@ if (size <= 1) {
   slideButtons[1].classList.add("hide");
 }
 
-var largeSlider = Object(_node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_4__["getSlider"])({
+var largeSlider = Object(_node_modules_simple_slider_src_simpleslider__WEBPACK_IMPORTED_MODULE_5__["getSlider"])({
   container: document.getElementById('my-slider'),
   children: document.getElementsByClassName('fader'),
   prop: 'opacity',
@@ -194,9 +195,112 @@ if (token) {
   !*** ./resources/js/components/Example.js ***!
   \********************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/portfolio/laravel/resources/js/components/Example.js: Unexpected token (10:2)\n\n\u001b[0m \u001b[90m  8 | \u001b[39m    let toggleModalBox \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m  9 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m}\u001b[0m\n    at Object.raise (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.parseExprAtom (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8828:20)\n    at Object.parseExprAtom (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:3599:20)\n    at Object.parseExprSubscripts (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8413:23)\n    at Object.parseMaybeUnary (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8393:21)\n    at Object.parseExprOps (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8280:23)\n    at Object.parseMaybeConditional (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8253:23)\n    at Object.parseMaybeAssign (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:8200:21)\n    at Object.parseVar (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10439:26)\n    at Object.parseVarStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10258:10)\n    at Object.parseStatementContent (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9855:21)\n    at Object.parseStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseBlock (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10335:10)\n    at Object.parseFunctionBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9408:24)\n    at Object.parseFunctionBodyAndFinish (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9378:10)\n    at Object.parseMethod (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9332:10)\n    at Object.pushClassMethod (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10767:30)\n    at Object.parseClassMemberWithIsStatic (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10692:12)\n    at Object.parseClassMember (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10631:10)\n    at withTopicForbiddingContext (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10586:14)\n    at Object.withTopicForbiddingContext (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9683:14)\n    at Object.parseClassBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10563:10)\n    at Object.parseClass (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10537:22)\n    at Object.parseExportDefaultExpression (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10962:19)\n    at Object.parseExport (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10868:31)\n    at Object.parseStatementContent (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9892:27)\n    at Object.parseStatement (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/var/www/html/portfolio/laravel/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/var/www/html/portfolio/laravel/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TextModal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var _material_ui_core_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Modal */ "./node_modules/@material-ui/core/esm/Modal/index.js");
+/* harmony import */ var react_image_lightbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-image-lightbox */ "./node_modules/react-image-lightbox/dist/index.es.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var TextModal =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(TextModal, _Component);
+
+  function TextModal(props) {
+    var _this;
+
+    _classCallCheck(this, TextModal);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextModal).call(this, props));
+    console.log('clicked');
+
+    var toggleModalBox = function toggleModalBox(services) {
+      _this.setState(function (state) {
+        return {
+          lightBoxIsOpen: !state.lightBoxIsOpen
+        };
+      });
+    };
+
+    _this.serviceProvided = _toConsumableArray(props.serviceProvided);
+    _this.state = {
+      isOpen: true
+    };
+
+    var handleOpen = function handleOpen() {
+      setOpen(true);
+    };
+
+    var handleClose = function handleClose() {
+      setOpen(false);
+    };
+
+    return _this;
+  }
+
+  _createClass(TextModal, [{
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          services = _this$state.services,
+          isOpen = _this$state.isOpen;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, isOpen ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Modal__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        "aria-labelledby": "simple-modal-title",
+        "aria-describedby": "simple-modal-description",
+        open: open,
+        onClose: handleClose
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: modalStyle,
+        className: classes.paper
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        id: "simple-modal-title"
+      }, "Text in a modal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        id: "simple-modal-description"
+      }, "Duis mollis, est non commodo luctus, nisi erat porttitor ligula."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SimpleModal, null))) : this.setState({
+        isOpen: false
+      }));
+    }
+  }]);
+
+  return TextModal;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 /***/ }),
 
@@ -311,6 +415,86 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/Showcase.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Showcase.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
+/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Modal */ "./node_modules/react-bootstrap/Modal.js");
+/* harmony import */ var react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_Modal__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var Showcase =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Showcase, _Component);
+
+  function Showcase(props) {
+    var _this;
+
+    _classCallCheck(this, Showcase);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Showcase).call(this, props));
+
+    _this.showModal = function () {
+      _this.setState({
+        show: true
+      });
+    };
+
+    _this.state = {
+      name: props.name
+    };
+    return _this;
+  }
+
+  _createClass(Showcase, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SimpleModal, {
+        show: this.showModal
+      });
+    }
+  }]);
+
+  return Showcase;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+function SimpleModal(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "foo");
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Showcase);
 
 /***/ }),
 

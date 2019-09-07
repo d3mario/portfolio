@@ -20,7 +20,7 @@ class ClientServices {
      */
     private function setProjectType($projectId){
 
-        $WEB = "Web Application";
+        $WEB = "Live demo";
         $PRINTS = 'Print Work';
         $LOGO = 'Logo Work';
 
@@ -41,4 +41,5 @@ class ClientServices {
     public function getProjectType(){
         return $this->value;
     }
+
 }

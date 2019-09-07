@@ -79,11 +79,17 @@ Case Study | Demario
                 <a class="no-underline text-blue-darkest " rel="viewContent"><img src="../images/{{$image->thumbnail}}" rel="smallThumbnail{{$loop->index}}" /></a>
             </div>
          @endforeach
-
+        @if($client['projectType'] == 'Live demo')
         <p class="text">
-            <a class="no-underline text-blue-darkest" rel="viewServices" href="#servicesProvided" ?page="">Provided <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Services</span></a>
-            View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">{{$client['projectType']}} </span>
+            <a class="no-underline text-blue-darkest" rel="viewServices" href="#servicesProvided" ?page="">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Stuff</span></a>
+            <a class="no-underline text-blue-darkest" href="{{$client['web']}} "> View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">{{$client['projectType']}} </span></a>
         </p>
+        @endif
+        @if($client['projectType'] != 'Live demo')
+        <p class="text">
+            <a class="no-underline text-blue-darkest" rel="viewServices" href="#servicesProvided" ?page="">View <span class="bg-orange-darkest hover:bg-blue-darkest text-white font-bold py-2 px-4 rounded-full" rel="spanText">Stuff</span></a>
+        </p>
+        @endif
     {{--</div>--}}
 
     </div>

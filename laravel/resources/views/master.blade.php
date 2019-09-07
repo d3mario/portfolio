@@ -7,6 +7,8 @@
         <title>@yield('title', 'DeMario | Portfolio')</title>
         <!-- Fonts -->
         <link rel="stylesheet" type="text/css" href="{{mix('css/app.css')}}">
+
+
     </head>
     <body>
     <header>

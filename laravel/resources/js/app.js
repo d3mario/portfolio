@@ -10,6 +10,7 @@ import React from 'react';
 import LightboxDisplay from './components/LightboxDisplay';
 import ReactDOM from 'react-dom';
 import Demo from './components/Example';
+import Showcase from './components/Showcase';
 
 import { getSlider } from '../../node_modules/simple-slider/src/simpleslider';
 
@@ -35,9 +36,7 @@ viewContentButton.addEventListener("click", function(e){
 
 viewProvidedServiceModalButton.addEventListener("click", function(e){
     ReactDOM.render(
-        // <ModalDisplay />,
-
-        <Demo name= {displayImages[0].src} isOpen="true"/>, 
+        <LightboxDisplay images={displayImages} isOpen="true" />,
     document.querySelector('#app')
     );
 });
